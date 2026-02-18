@@ -1,0 +1,45 @@
+PREFIX spatialf:  <http://jena.apache.org/function/spatial#>
+PREFIX piirrite:  <http://piirrite.univ-lyon1.fr/ontology/core#>
+PREFIX piirritev: <http://piirrite.univ-lyon1.fr/vocabulary#>
+PREFIX geo:       <http://www.opengis.net/ont/geosparql#>
+PREFIX uom:       <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX saref:     <https://saref.etsi.org/core/>
+PREFIX osmway:    <https://www.openstreetmap.org/way/>
+
+# CQ6 What amenities can one encounter by traversing a given building from one side to another ?
+
+SELECT DISTINCT ?amenityType
+WHERE {
+  VALUES ?spatialSegment {
+    osmway:1046780733
+    osmway:1069337029
+  }
+  
+  ?spatialSegment a piirrite:TraversableSegment ;
+                  geo:hasGeometry ?segmentGeom .
+  
+  ?segmentGeom geo:asWKT ?segmentWKT .
+  
+  {
+    ?amenityEntity a piirrite:TopologicalSegment .
+  } UNION {
+    ?amenityEntity a piirrite:SpatialPoint .
+  }
+  
+  ?amenityEntity a piirrite:TopologicalSegment ;
+                  geo:hasGeometry ?amenityGeom ;
+                  saref:hasProperty ?amenityProp ;
+                  saref:hasProperty ?levelProp . 
+
+  ?amenityProp a ?amenityType .
+  FILTER(CONTAINS(STR(?amenityType), 'OsmAmenity'))
+
+  ?levelProp a piirritev:OsmLevel ;
+                saref:hasValue ?level .
+  FILTER(?level = 0)
+
+  ?amenityGeom geo:asWKT ?amenityWKT .
+
+  FILTER( spatialf:distance(?amenityWKT, ?segmentWKT, uom:metre) <= 5 )
+}
+ORDER BY ?amenityType

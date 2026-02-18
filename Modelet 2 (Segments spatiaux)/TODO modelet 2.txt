@@ -1,3 +1,0 @@
-- faire valider les CQ
-- récupérer l'info du wiki OSM "ce tag s'applique aux nodes/ways/relations" et la stocker dans incit avec une propriété appropriée
-- transformer tous les segments du fichier RDF sous le format incit

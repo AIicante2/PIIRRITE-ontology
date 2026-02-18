@@ -1,0 +1,25 @@
+PREFIX spatialf:  <http://jena.apache.org/function/spatial#>
+PREFIX piirrite:  <http://piirrite.univ-lyon1.fr/ontology/core#>
+PREFIX piirritev: <http://piirrite.univ-lyon1.fr/vocabulary#>
+PREFIX geo:       <http://www.opengis.net/ont/geosparql#>
+PREFIX uom:       <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX saref:     <https://saref.etsi.org/core/>
+
+# CQ1 Which vending machine is nearest to a given position?
+
+SELECT ?pt ?distance WHERE {
+  BIND("POINT(4.87 45.78)"^^geo:wktLiteral AS ?refPoint)
+
+  ?pt a piirrite:SpatialPoint ;
+      geo:hasGeometry ?geom ;
+      saref:hasProperty ?prop .
+
+  ?geom a geo:Geometry ;
+        geo:asWKT ?wkt .
+
+  ?prop a piirritev:OsmAmenityVendingMachine .
+
+  BIND(spatialf:distance(?wkt, ?refPoint, uom:metre) AS ?distance)
+}
+ORDER BY ASC(?distance)
+LIMIT 1

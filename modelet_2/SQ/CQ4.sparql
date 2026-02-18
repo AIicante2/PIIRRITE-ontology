@@ -1,0 +1,33 @@
+PREFIX geof:      <http://www.opengis.net/def/function/geosparql/>
+PREFIX piirrite:  <http://piirrite.univ-lyon1.fr/ontology/core#>
+PREFIX piirritev: <http://piirrite.univ-lyon1.fr/vocabulary#>
+PREFIX geo:       <http://www.opengis.net/ont/geosparql#>
+PREFIX saref:     <https://saref.etsi.org/core/>
+PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
+
+# CQ4 How many ways are there to get to the second floor of a given building?
+
+SELECT (COUNT(DISTINCT ?accessPoint) AS ?numberOfWays)
+WHERE {
+  ?building a piirrite:TopologicalSegment ;
+            saref:hasProperty ?buildingProp ;
+            geo:hasGeometry ?buildingGeom .
+  
+  ?buildingProp a piirritev:OsmBuildingUniversity ;
+                piirrite:hasOsmUniversityName "Darwin"^^xsd:string .
+  
+  ?buildingGeom geo:asWKT ?buildingWKT .
+  
+  ?accessPoint geo:hasGeometry/geo:asWKT ?accessGeometry .
+  FILTER(geof:sfWithin(?accessGeometry, ?nautibusBoundary))
+
+  ?accessPoint saref:hasProperty [
+    a piirritev:OsmLevel ;
+    saref:hasValue ?levelValue
+  ] .
+  
+  FILTER(
+    CONTAINS(?levelValue, "2;") || 
+    CONTAINS(?levelValue, ";2")
+  )
+}
