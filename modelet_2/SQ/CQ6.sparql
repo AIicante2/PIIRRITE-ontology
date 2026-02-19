@@ -26,8 +26,7 @@ WHERE {
     ?amenityEntity a piirrite:SpatialPoint .
   }
   
-  ?amenityEntity a piirrite:TopologicalSegment ;
-                  geo:hasGeometry ?amenityGeom ;
+  ?amenityEntity geo:hasGeometry ?amenityGeom ;
                   saref:hasProperty ?amenityProp ;
                   saref:hasProperty ?levelProp . 
 
