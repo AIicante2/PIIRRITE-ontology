@@ -97,6 +97,19 @@ def value_datatype(var):
         return XSD.boolean
     return XSD.string
 
+def remove_blank_node_property(g, subject, predicate, rdf_type):
+    blank_nodes_to_remove = []
+    
+    for bn in g.objects(subject, predicate):
+        if (bn, RDF.type, rdf_type) in g:
+            blank_nodes_to_remove.append(bn)
+    
+    for bn in blank_nodes_to_remove:
+        g.remove((bn, None, None))
+        g.remove((subject, predicate, bn))
+    
+    return len(blank_nodes_to_remove)
+
 def add_context_to_SpatialSegment(osm_way:URIRef, piirrite_graph:Graph, piirritev_graph:Graph,
                                  piirrited_graph:Graph, osmd_graph:Graph, SpatialSegment_URI:URIRef,
                                  osm_key:str, osm_value:str, unfounds:dict[str, dict[str, int]]) -> dict[str, dict[str, int]]:
@@ -129,8 +142,23 @@ def add_context_to_SpatialSegment(osm_way:URIRef, piirrite_graph:Graph, piirrite
             unfounds['values'][concept] += 1
         return unfounds
 
-    # À ce stade, plus rien ne s'oppose à l'enregistrement de la donnée contextuelle.
-    # On le fait donc
+    # le tag courant est peut-être voué à être utilisé en combinaison avec un autre
+    # tag de la spatialEntity (ex : capacity qui se rapporte à bicycleParking)
+    # -- voir l'explication sur les tuic ci-dessous
+    # Dans ce cas, il ne faut pas l'enregistrer comme concept à part entière
+    #
+    # Si c'est le cas, deux possibilités :
+    # - soit il a déjà été enregistré comme tel, et pas la peine de continuer
+    # - soit il n'a pas déjà été enregistré comme tel, alors on l'enregistre comme
+    #   concept à part entière et on le supprimera quand on l'enregistrera comme tel
+    #   (lors du traitement du tag auquel il se rapporte) : voir (*) ci-dessous
+    for saref_property in piirrited_graph.objects(SpatialSegment_URI, saref.hasProperty):
+        for tuic_predicate, _ in piirrited_graph.predicate_objects(saref_property):
+            if tuic_predicate not in [RDF.type, saref.hasValue]:
+                if str(tuic_predicate).endswith(snake_to_camel(osm_key)):
+                    return unfounds
+
+    # on enregistre la propriété contextuelle
     context = BNode()
     piirrited_graph.add((SpatialSegment_URI, saref.hasProperty, context))
     piirrited_graph.add((context, RDF.type, piirritev[concept]))
@@ -172,6 +200,17 @@ def add_context_to_SpatialSegment(osm_way:URIRef, piirrite_graph:Graph, piirrite
             tuic_URI = piirrite['hasOsm' + snake_to_camel(osm_key) + snake_to_camel(osm_value) + tuic_piirritev_name]
             converted_value = str_to_best_type(tuic_value)
             piirrited_graph.add((context, tuic_URI, Literal(converted_value, datatype = value_datatype(converted_value))))
+
+            # (*) si le tuic était déjà enregistré comme concept à part entière,
+            # on supprime ce concept
+            for property in piirrited_graph.objects(SpatialSegment_URI, saref.hasProperty):
+                for property_type in piirrited_graph.objects(property, RDF.type):
+                    pt_name = str(property_type).split('#Osm')[1]
+                    if pt_name == tuic_piirritev_name:
+                        remove_blank_node_property(piirrited_graph,
+                                                   SpatialSegment_URI,
+                                                   saref.hasProperty,
+                                                   property_type)
 
     return unfounds
 
