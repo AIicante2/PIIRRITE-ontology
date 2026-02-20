@@ -1,6 +1,6 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix saref: <https://saref.etsi.org/core/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .

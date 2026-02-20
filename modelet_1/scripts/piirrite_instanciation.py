@@ -98,7 +98,7 @@ def add_context_to_SpatialPoint(osm_node:URIRef,
     # et que ce n'est pas un tuic (voir ci-dessous)
     # en suivant le dictionnaire SKOS, on l'enregistre comme telle
     if len(osm_value.split(' ')) > 1 or not should_be_concept([osm_value]):
-        conceptScheme = 'Osm' + snake_to_camel(osm_key)
+        conceptScheme = snake_to_camel(osm_key)
         if (piirritev[conceptScheme], RDF.type, SKOS.ConceptScheme) in piirritev_graph:
             context = BNode()
             piirrited_graph.add((SpatialPoint_URI, saref.hasProperty, context))
@@ -111,7 +111,7 @@ def add_context_to_SpatialPoint(osm_node:URIRef,
     # sinon, on lance le processus de conceptualisation
 
     # OSM utilise du snake_case et PIIRRITE du CamelCase
-    concept = 'Osm' + snake_to_camel(osm_key) + snake_to_camel(osm_value)
+    concept = snake_to_camel(osm_key) + snake_to_camel(osm_value)
 
     # Si la clé n'est pas dans le vocabulaire, on ne l'ajoute pas
     if (piirritev[concept], RDF.type, SKOS.Concept) not in piirritev_graph:
@@ -176,7 +176,7 @@ def add_context_to_SpatialPoint(osm_node:URIRef,
         if tuic in possible_tuics:
             # on a trouvé un tuic !
             tuic_piirritev_name = snake_to_camel(tuic) if tuic != osm_value else 'Type'
-            tuic_URI = piirrite['hasOsm' + snake_to_camel(osm_key) + snake_to_camel(osm_value) + tuic_piirritev_name]
+            tuic_URI = piirrite['has' + snake_to_camel(osm_key) + snake_to_camel(osm_value) + tuic_piirritev_name]
             converted_value = str_to_best_type(tuic_value)
             piirrited_graph.add((context, tuic_URI, Literal(converted_value, datatype = value_datatype(converted_value))))
 
@@ -184,7 +184,7 @@ def add_context_to_SpatialPoint(osm_node:URIRef,
             # on supprime ce concept
             for property in piirrited_graph.objects(SpatialPoint_URI, saref.hasProperty):
                 for property_type in piirrited_graph.objects(property, RDF.type):
-                    pt_name = str(property_type).split('#Osm')[1]
+                    pt_name = str(property_type).split('#')[1]
                     if pt_name == tuic_piirritev_name:
                         remove_blank_node_property(piirrited_graph,
                                                    SpatialPoint_URI,

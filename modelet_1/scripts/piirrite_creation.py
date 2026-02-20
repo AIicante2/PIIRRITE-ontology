@@ -147,7 +147,7 @@ def add_OsmEntity_to_piirrite(piirrite_graph:Graph) -> None:
                              lang = 'fr')))
 
 def add_OsmConceptScheme_to_piirritev(piirritev_graph:Graph, osm_key:str, description:str) -> None:
-    OsmConceptScheme_URI = piirritev[f'Osm{snake_to_camel(osm_key)}']
+    OsmConceptScheme_URI = piirritev[f'{snake_to_camel(osm_key)}']
     piirritev_graph.add((OsmConceptScheme_URI, RDF.type, SKOS.ConceptScheme))
     piirritev_graph.add((OsmConceptScheme_URI,
                       SKOS.prefLabel,
@@ -158,14 +158,14 @@ def add_OsmConceptScheme_to_piirritev(piirritev_graph:Graph, osm_key:str, descri
 def add_OsmConcept_to_piirritev(piirritev_graph:Graph, osm_key:str, value:str, description:str) -> None:
     if value == 'any':
         return
-    OsmConcept_URI = piirritev[f'Osm{snake_to_camel(osm_key.replace(' ', '_'))}{snake_to_camel(value)}']
+    OsmConcept_URI = piirritev[f'{snake_to_camel(osm_key.replace(' ', '_'))}{snake_to_camel(value)}']
     piirritev_graph.add((OsmConcept_URI, RDF.type, SKOS.Concept))
     piirritev_graph.add((OsmConcept_URI, RDFS.subClassOf, piirrite.OsmEntity))
     piirritev_graph.add((OsmConcept_URI,
                       SKOS.prefLabel,
                       Literal(snake_to_natural(value, True), lang = 'en')))
     piirritev_graph.add((OsmConcept_URI, SKOS.definition, Literal(description, lang = 'en')))
-    piirritev_graph.add((OsmConcept_URI, SKOS.inScheme, piirritev[f'Osm{snake_to_camel(osm_key)}']))
+    piirritev_graph.add((OsmConcept_URI, SKOS.inScheme, piirritev[f'{snake_to_camel(osm_key)}']))
     piirritev_graph.add((OsmConcept_URI, piirrite.osmId, Literal(value)))
 
 def add_hasOsmTuic_to_piirrite2(piirritev_graph:Graph, piirrite2_graph:Graph,
@@ -177,7 +177,7 @@ def add_hasOsmTuic_to_piirrite2(piirritev_graph:Graph, piirrite2_graph:Graph,
         tuic_camel = snake_to_camel(tuic)
     else:
         tuic_camel = 'Type'
-    hasOsmTuic_URI = piirrite[f'hasOsm{value_camel}{tuic_camel}']
+    hasOsmTuic_URI = piirrite[f'has{value_camel}{tuic_camel}']
     piirrite2_graph.add((hasOsmTuic_URI, RDF.type, OWL.DatatypeProperty))
     piirrite2_graph.add((hasOsmTuic_URI, RDFS.subPropertyOf, saref.hasValue))
     piirrite2_graph.add((hasOsmTuic_URI,
@@ -188,8 +188,8 @@ def add_hasOsmTuic_to_piirrite2(piirritev_graph:Graph, piirrite2_graph:Graph,
     piirrite2_graph.add((hasOsmTuic_URI, RDFS.domain, saref.Property))
     piirrite2_graph.add((hasOsmTuic_URI, RDFS.range, RDFS.Literal))
     piirrite2_graph.add((hasOsmTuic_URI, piirrite.osmId, Literal(tuic)))
-    piirrite2_graph.add((hasOsmTuic_URI, piirrite.isOsmTagRelatedTo, piirritev[f'Osm{snake_to_camel(osm_key)}{value_camel}']))
-    piirritev_graph.add((piirritev[f'Osm{snake_to_camel(osm_key)}{value_camel}'], piirrite.hasRelatedOsmTag, hasOsmTuic_URI))
+    piirrite2_graph.add((hasOsmTuic_URI, piirrite.isOsmTagRelatedTo, piirritev[f'{snake_to_camel(osm_key)}{value_camel}']))
+    piirritev_graph.add((piirritev[f'{snake_to_camel(osm_key)}{value_camel}'], piirrite.hasRelatedOsmTag, hasOsmTuic_URI))
 
 ###########################
 
