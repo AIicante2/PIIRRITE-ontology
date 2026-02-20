@@ -10,21 +10,31 @@ PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
 SELECT (COUNT(DISTINCT ?accessPoint) AS ?numberOfWays)
 WHERE {
   ?building a piirrite:TopologicalSegment ;
-            saref:hasProperty ?buildingProp ;
-            geo:hasGeometry ?buildingGeom .
+    saref:hasProperty ?buildingProp ;
+    geo:hasGeometry ?buildingGeom .
   
-  ?buildingProp a piirritev:OsmBuildingUniversity ;
-                piirrite:hasOsmUniversityName "Darwin"^^xsd:string .
+  ?buildingProp a piirritev:BuildingUniversity ;
+    piirrite:hasBuildingUniversityName "Darwin"^^xsd:string .
   
   ?buildingGeom geo:asWKT ?buildingWKT .
-  
-  ?accessPoint geo:hasGeometry/geo:asWKT ?accessGeometry .
-  FILTER(geof:sfWithin(?accessGeometry, ?nautibusBoundary))
 
-  ?accessPoint saref:hasProperty [
-    a piirritev:OsmLevel ;
-    saref:hasValue ?levelValue
-  ] .
+  {
+    ?accessPoint a piirrite:TraversableSegment .
+  } UNION {
+    ?accessPoint a piirrite:TopologicalSegment .
+  } UNION {
+    ?accessPoint a piirrite:SpatialPoint .
+  }
+  
+  ?accessPoint geo:hasGeometry ?accessGeom ;
+    saref:hasProperty ?levelProp .
+
+  ?accessGeom geo:asWKT ?accessWKT .
+
+  FILTER(geof:sfWithin(?accessWKT, ?buildingWKT))
+
+  ?levelProp a piirritev:Level ;
+    saref:hasValue ?levelValue .
   
   FILTER(
     CONTAINS(?levelValue, "2;") || 

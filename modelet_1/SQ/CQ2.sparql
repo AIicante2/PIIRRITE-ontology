@@ -12,13 +12,13 @@ WHERE {
   BIND("POINT(4.882 45.787)"^^geo:wktLiteral AS ?refPoint)
 
   ?pt a piirrite:SpatialPoint ;
-      geo:hasGeometry ?geom ;
-      saref:hasProperty ?prop .
+    geo:hasGeometry ?geom ;
+    saref:hasProperty ?prop .
 
   ?geom a geo:Geometry ;
-        geo:asWKT ?wkt .
+    geo:asWKT ?wkt .
 
-  ?prop a piirritev:OsmRailwayTramStop .
+  ?prop a piirritev:Tram .
 
   FILTER( spatialf:distance(?wkt, ?refPoint, uom:metre) <= 100 )
 }

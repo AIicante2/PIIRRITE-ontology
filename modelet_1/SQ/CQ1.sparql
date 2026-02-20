@@ -11,13 +11,13 @@ SELECT ?pt ?distance WHERE {
   BIND("POINT(4.87 45.78)"^^geo:wktLiteral AS ?refPoint)
 
   ?pt a piirrite:SpatialPoint ;
-      geo:hasGeometry ?geom ;
-      saref:hasProperty ?prop .
+    geo:hasGeometry ?geom ;
+    saref:hasProperty ?prop .
 
   ?geom a geo:Geometry ;
-        geo:asWKT ?wkt .
+    geo:asWKT ?wkt .
 
-  ?prop a piirritev:OsmAmenityVendingMachine .
+  ?prop a piirritev:AmenityVendingMachine .
 
   BIND(spatialf:distance(?wkt, ?refPoint, uom:metre) AS ?distance)
 }

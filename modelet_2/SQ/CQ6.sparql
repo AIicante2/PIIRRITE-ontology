@@ -16,7 +16,7 @@ WHERE {
   }
   
   ?spatialSegment a piirrite:TraversableSegment ;
-                  geo:hasGeometry ?segmentGeom .
+    geo:hasGeometry ?segmentGeom .
   
   ?segmentGeom geo:asWKT ?segmentWKT .
   
@@ -27,14 +27,14 @@ WHERE {
   }
   
   ?amenityEntity geo:hasGeometry ?amenityGeom ;
-                  saref:hasProperty ?amenityProp ;
-                  saref:hasProperty ?levelProp . 
+    saref:hasProperty ?amenityProp ;
+    saref:hasProperty ?levelProp . 
 
   ?amenityProp a ?amenityType .
-  FILTER(CONTAINS(STR(?amenityType), 'OsmAmenity'))
+  FILTER(CONTAINS(STR(?amenityType), 'Amenity'))
 
-  ?levelProp a piirritev:OsmLevel ;
-                saref:hasValue ?level .
+  ?levelProp a piirritev:Level ;
+    saref:hasValue ?level .
   FILTER(?level = 0)
 
   ?amenityGeom geo:asWKT ?amenityWKT .

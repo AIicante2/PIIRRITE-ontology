@@ -10,23 +10,23 @@ PREFIX xsd:       <http://www.w3.org/2001/XMLSchema#>
 ASK
 WHERE {
   ?building a piirrite:TopologicalSegment ;
-            saref:hasProperty ?buildingProp ;
-            geo:hasGeometry ?buildingGeom .
+    saref:hasProperty ?buildingProp ;
+    geo:hasGeometry ?buildingGeom .
   
-  ?buildingProp a piirritev:OsmBuildingUniversity ;
-                piirrite:hasOsmUniversityName "Quai 43"^^xsd:string .
+  ?buildingProp a piirritev:BuildingUniversity ;
+    piirrite:hasBuildingUniversityName "Quai 43"^^xsd:string .
   
   ?buildingGeom geo:asWKT ?buildingWKT .
   
   ?point a piirrite:SpatialPoint ;
-         geo:hasGeometry ?pointGeom ;
-         saref:hasProperty ?vendingMachineProp ;
-         saref:hasProperty ?levelProp .
+    geo:hasGeometry ?pointGeom ;
+    saref:hasProperty ?vendingMachineProp ;
+    saref:hasProperty ?levelProp .
   
-  ?vendingMachineProp a piirritev:OsmAmenityVendingMachine .
+  ?vendingMachineProp a piirritev:AmenityVendingMachine .
   
-  ?levelProp a piirritev:OsmLevel ;
-             saref:hasValue 1 .
+  ?levelProp a piirritev:Level ;
+    saref:hasValue 1 .
   
   ?pointGeom geo:asWKT ?pointWKT .
   
