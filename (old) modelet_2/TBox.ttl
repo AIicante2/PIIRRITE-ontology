@@ -1,0 +1,92 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+piirrite:TopologicalSegment a owl:Class ;
+    rdfs:label "Topological segment"@en,
+        "Segment topologique"@fr ;
+    rdfs:comment "A spatial segment structuring the traversed space (e.g. wall, isoline, …)."@en,
+        "Un segment spatial structurant l'espace parcouru (e.g. mur, isoligne, …)."@fr ;
+    rdfs:subClassOf piirrite:SpatialSegment .
+
+piirrite:TraversableSegment a owl:Class ;
+    rdfs:label "Traversable segment"@en,
+        "Segment praticable"@fr ;
+    rdfs:comment "A spatial segment that can be traversed by users."@en,
+        "Un segment spatial praticable par les utilisateurs."@fr ;
+    rdfs:subClassOf piirrite:SpatialSegment .
+
+piirrite:osmId a owl:DatatypeProperty ;
+    rdfs:label "has OSM id"@en,
+        "a l'id OSM"@fr ;
+    rdfs:comment "Links an OSM concept to its OSM machine-readable id."@en,
+        "Lie un concept OSM à son id OSM machine-lisible."@fr ;
+    rdfs:domain piirrite:OsmEntity ;
+    rdfs:range xsd:string .
+
+piirrite:hasExtremity a owl:ObjectProperty ;
+    rdfs:label "has extremity"@en,
+        "a l'extrémité"@fr ;
+    rdfs:comment "Links a spatial segment to one of its two extremities, which are spatial points."@en,
+        "Lie un segment spatial à une de ses deux extrémités, qui sont des points spatiaux."@fr ;
+    rdfs:domain piirrite:SpatialSegment ;
+    rdfs:range piirrite:SpatialPoint ;
+    owl:inverseOf piirrite:isExtremityOf .
+
+piirrite:hasRelatedOsmTag a owl:ObjectProperty ;
+    rdfs:label "has related OSM tag"@en,
+        "a une étiquette OSM liée"@fr ;
+    rdfs:comment "Links an OSM concept to an OSM tag used in combination."@en,
+        "Lie un concept OSM à une étiquette OSM utilisée en combinaison."@fr ;
+    rdfs:domain piirrite:OsmEntity ;
+    owl:inverseOf piirrite:isOsmTagRelatedTo .
+
+piirrite:isExtremityOf a owl:ObjectProperty ;
+    rdfs:label "is an extremity of"@en,
+        "est  l'une des extrémités de"@fr ;
+    rdfs:comment "Links a spatial point to a spatial segment of which it is an extremity."@en,
+        "Lie un point spatial à un segment spatial duquel il est une extrémité."@fr ;
+    rdfs:domain piirrite:SpatialPoint ;
+    rdfs:range piirrite:SpatialSegment ;
+    owl:inverseOf piirrite:hasExtremity .
+
+piirrite:isOsmTagRelatedTo a owl:ObjectProperty ;
+    rdfs:label "is an OSM tag related to"@en,
+        "est une étiquette OSM liée à"@fr ;
+    rdfs:comment "Links an OSM tag to the OSM concept it is used in combination with."@en,
+        "Lie une étiquette OSM au concept OSM avec lequel elle est utilisée."@fr ;
+    rdfs:range piirrite:OsmEntity ;
+    owl:inverseOf piirrite:hasRelatedOsmTag .
+
+piirrite:SpatialEntity a owl:Class ;
+    rdfs:label "Spatial entity"@en,
+        "Entité spatiale"@fr ;
+    rdfs:comment "An entity located in a geographic space."@en,
+        "Une entité localisée dans un espace géographique."@fr ;
+    rdfs:subClassOf geo:Feature .
+
+piirrite:SpatialPoint a owl:Class ;
+    rdfs:label "Spatial point"@en,
+        "Point spatial"@fr ;
+    rdfs:comment "A point located in a geographic space and possibly contextualized by properties."@en,
+        "Un point localisé dans un espace géographique et possiblement contextualisé par des propriétés."@fr ;
+    rdfs:subClassOf piirrite:SpatialEntity,
+        saref:FeatureOfInterest .
+
+piirrite:OsmEntity a owl:Class ;
+    rdfs:label "OSM entity"@en,
+        "Entité OSM"@fr ;
+    rdfs:comment "An OSM entity used to contextualize a spatial entity."@en,
+        "Une entité OSM utilisée pour contextualiser une entité spatiale."@fr .
+
+piirrite:SpatialSegment a owl:Class ;
+    rdfs:label "Spatial segment"@en,
+        "Segment spatial"@fr ;
+    rdfs:comment "A segment located in a geographic space and possibly contextualized by properties."@en,
+        "Un segment localisé dans un espace géographique et possiblement contextualisé par des propriétés."@fr ;
+    rdfs:subClassOf piirrite:SpatialEntity,
+        saref:FeatureOfInterest .
+

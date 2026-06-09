@@ -1,92 +1,168 @@
+@prefix : <http://piirrite.univ-lyon1.fr/ontology/core#> .
+@prefix sf: <http://www.opengis.net/ont/sf/1.1.1> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix saref: <https://saref.etsi.org/core/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/3.3.0/schema/qudt> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
+@base <http://piirrite.univ-lyon1.fr/ontology/core#> .
 
-piirrite:TopologicalSegment a owl:Class ;
-    rdfs:label "Topological segment"@en,
-        "Segment topologique"@fr ;
-    rdfs:comment "A spatial segment structuring the traversed space (e.g. wall, isoline, …)."@en,
-        "Un segment spatial structurant l'espace parcouru (e.g. mur, isoligne, …)."@fr ;
-    rdfs:subClassOf piirrite:SpatialSegment .
+<http://piirrite.univ-lyon1.fr/ontology/core#> rdf:type owl:Ontology ;
+                                                owl:imports <http://qudt.org/3.3.0/schema/qudt> ,
+                                                            <http://www.opengis.net/ont/geosparql#1.1> ,
+                                                            sf: ,
+                                                            <http://www.w3.org/2004/02/skos/core> ,
+                                                            <https://saref.etsi.org/core/v4.1.1/> .
 
-piirrite:TraversableSegment a owl:Class ;
-    rdfs:label "Traversable segment"@en,
-        "Segment praticable"@fr ;
-    rdfs:comment "A spatial segment that can be traversed by users."@en,
-        "Un segment spatial praticable par les utilisateurs."@fr ;
-    rdfs:subClassOf piirrite:SpatialSegment .
+#################################################################
+#    Object Properties
+#################################################################
 
-piirrite:osmId a owl:DatatypeProperty ;
-    rdfs:label "has OSM id"@en,
-        "a l'id OSM"@fr ;
-    rdfs:comment "Links an OSM concept to its OSM machine-readable id."@en,
-        "Lie un concept OSM à son id OSM machine-lisible."@fr ;
-    rdfs:domain piirrite:OsmEntity ;
-    rdfs:range xsd:string .
+###  http://piirrite.univ-lyon1.fr/ontology/core#hasAllowedValue
+piirrite:hasAllowedValue rdf:type owl:ObjectProperty ;
+                         rdfs:domain saref:Property ;
+                         rdfs:range skos:Concept ;
+                         rdfs:comment "Lie une propriété saref à la description d'une valeur qu'elle peut prendre."@fr ,
+                                      "Links a saref property to the description of a value it can have."@en ;
+                         rdfs:label "a pour valeur autorisée"@fr ,
+                                    "has allowed value"@en .
 
-piirrite:hasExtremity a owl:ObjectProperty ;
-    rdfs:label "has extremity"@en,
-        "a l'extrémité"@fr ;
-    rdfs:comment "Links a spatial segment to one of its two extremities, which are spatial points."@en,
-        "Lie un segment spatial à une de ses deux extrémités, qui sont des points spatiaux."@fr ;
-    rdfs:domain piirrite:SpatialSegment ;
-    rdfs:range piirrite:SpatialPoint ;
-    owl:inverseOf piirrite:isExtremityOf .
 
-piirrite:hasRelatedOsmTag a owl:ObjectProperty ;
-    rdfs:label "has related OSM tag"@en,
-        "a une étiquette OSM liée"@fr ;
-    rdfs:comment "Links an OSM concept to an OSM tag used in combination."@en,
-        "Lie un concept OSM à une étiquette OSM utilisée en combinaison."@fr ;
-    rdfs:domain piirrite:OsmEntity ;
-    owl:inverseOf piirrite:isOsmTagRelatedTo .
+###  http://piirrite.univ-lyon1.fr/ontology/core#hasUnit
+piirrite:hasUnit rdf:type owl:ObjectProperty ;
+                 rdfs:domain saref:Property ;
+                 rdfs:range qudt:Unit ;
+                 rdfs:comment "Lie une propriété saref à son unité de mesure."@fr ,
+                              "Links a saref property to its measurement unit."@en ;
+                 rdfs:label "a pour unité"@fr ,
+                            "has unit"@en .
 
-piirrite:isExtremityOf a owl:ObjectProperty ;
-    rdfs:label "is an extremity of"@en,
-        "est  l'une des extrémités de"@fr ;
-    rdfs:comment "Links a spatial point to a spatial segment of which it is an extremity."@en,
-        "Lie un point spatial à un segment spatial duquel il est une extrémité."@fr ;
-    rdfs:domain piirrite:SpatialPoint ;
-    rdfs:range piirrite:SpatialSegment ;
-    owl:inverseOf piirrite:hasExtremity .
 
-piirrite:isOsmTagRelatedTo a owl:ObjectProperty ;
-    rdfs:label "is an OSM tag related to"@en,
-        "est une étiquette OSM liée à"@fr ;
-    rdfs:comment "Links an OSM tag to the OSM concept it is used in combination with."@en,
-        "Lie une étiquette OSM au concept OSM avec lequel elle est utilisée."@fr ;
-    rdfs:range piirrite:OsmEntity ;
-    owl:inverseOf piirrite:hasRelatedOsmTag .
+###  http://piirrite.univ-lyon1.fr/ontology/core#hasValueDatatype
+piirrite:hasValueDatatype rdf:type owl:ObjectProperty ;
+                          rdfs:domain saref:Property ;
+                          rdfs:range [ rdf:type owl:Class ;
+                                       owl:unionOf ( rdfs:Class
+                                                     rdfs:Datatype
+                                                   )
+                                     ] ;
+                          rdfs:comment "Lie une propriété saref à un type que ses valeurs peuvent prendre."@fr ,
+                                       "Links a saref property to a datatype its values can have"@en ;
+                          rdfs:label "a pour type de valeur"@fr ,
+                                     "has value datatype"@en .
 
-piirrite:SpatialEntity a owl:Class ;
-    rdfs:label "Spatial entity"@en,
-        "Entité spatiale"@fr ;
-    rdfs:comment "An entity located in a geographic space."@en,
-        "Une entité localisée dans un espace géographique."@fr ;
-    rdfs:subClassOf geo:Feature .
 
-piirrite:SpatialPoint a owl:Class ;
-    rdfs:label "Spatial point"@en,
-        "Point spatial"@fr ;
-    rdfs:comment "A point located in a geographic space and possibly contextualized by properties."@en,
-        "Un point localisé dans un espace géographique et possiblement contextualisé par des propriétés."@fr ;
-    rdfs:subClassOf piirrite:SpatialEntity,
-        saref:FeatureOfInterest .
+###  http://piirrite.univ-lyon1.fr/ontology/core#passesBy
+piirrite:passesBy rdf:type owl:ObjectProperty ;
+                  rdfs:domain piirrite:NavigablePath ;
+                  rdfs:range piirrite:PointOfInterest ;
+                  rdfs:comment "Lie un chemin navigable à un point d'intérêt par lequel il passe"@fr ,
+                               "Links a navigable path to a point of interest it passes by"@en ;
+                  rdfs:label "passe par"@fr ,
+                             "passes by"@en .
 
-piirrite:OsmEntity a owl:Class ;
-    rdfs:label "OSM entity"@en,
-        "Entité OSM"@fr ;
-    rdfs:comment "An OSM entity used to contextualize a spatial entity."@en,
-        "Une entité OSM utilisée pour contextualiser une entité spatiale."@fr .
 
-piirrite:SpatialSegment a owl:Class ;
-    rdfs:label "Spatial segment"@en,
-        "Segment spatial"@fr ;
-    rdfs:comment "A segment located in a geographic space and possibly contextualized by properties."@en,
-        "Un segment localisé dans un espace géographique et possiblement contextualisé par des propriétés."@fr ;
-    rdfs:subClassOf piirrite:SpatialEntity,
-        saref:FeatureOfInterest .
+#################################################################
+#    Classes
+#################################################################
 
+###  http://piirrite.univ-lyon1.fr/ontology/core#AreaOfInterest
+piirrite:AreaOfInterest rdf:type owl:Class ;
+                        rdfs:subClassOf geo:Feature ,
+                                        saref:FeatureOfInterest ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty saref:hasPropertyValue ;
+                                          owl:someValuesFrom saref:PropertyValue
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty geo:hasGeometry ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass sf:Polygon
+                                        ] ;
+                        owl:disjointWith piirrite:PointOfInterest ,
+                                         piirrite:PolylineOfInterest ;
+                        rdfs:comment "A 2D area over a geographic space represented as a polygon and contextualised by properties which are inherited by all context-faring entities contained within the area"@en ,
+                                     "Une région 2D d'un espace géographique représentée par un polygon et contextualisée par des propriétés qui sont hérités par toutes les entitées porteuses de contexte contenues dans la région"@fr ;
+                        rdfs:label "Area of Interest"@en ,
+                                   "Région d'intérêt"@fr .
+
+
+###  http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath
+piirrite:NavigablePath rdf:type owl:Class ;
+              rdfs:subClassOf piirrite:PolylineOfInterest ;
+              rdfs:comment "A polyline of interest that can be traveled through"@en ,
+                           "Une polyligne d'intérêt dont le parcours est possible"@fr ;
+              rdfs:label "Chemin navigable"@fr ,
+                         "Navigable path"@en .
+
+
+###  http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest
+piirrite:PointOfInterest rdf:type owl:Class ;
+                         rdfs:subClassOf geo:Feature ,
+                                         saref:FeatureOfInterest ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty saref:hasPropertyValue ;
+                                           owl:someValuesFrom saref:PropertyValue
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty geo:hasGeometry ;
+                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass sf:Point
+                                         ] ;
+                         owl:disjointWith piirrite:PolylineOfInterest ;
+                         rdfs:comment "A dimensionless entity located in a geographic space and contextualised by properties"@en ,
+                                      "Une entité sans dimension localisée dans un espace géographique et contextualisée par des propriétés"@fr ;
+                         rdfs:label "Point d'intérêt"@fr ,
+                                    "Point of Interest"@en .
+
+
+###  http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest
+piirrite:PolylineOfInterest rdf:type owl:Class ;
+                            rdfs:subClassOf geo:Feature ,
+                                            saref:FeatureOfInterest ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty saref:hasPropertyValue ;
+                                              owl:someValuesFrom saref:PropertyValue
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty geo:hasGeometry ;
+                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass sf:LineString
+                                            ] ;
+                            rdfs:comment "A sequence of 1 or more consecutive segments located in a geographic space and contextualised by properties"@en ,
+                                         "Une séquence d'1 ou plus segments consécutifs localisée dans un espace géographique et contextualisée par des propriétés"@fr ;
+                            rdfs:label "Polyligne d'intérêt"@fr ,
+                                       "Polyline Of Interest"@en .
+
+
+###  http://qudt.org/3.3.0/schema/qudtUnit
+<http://qudt.org/3.3.0/schema/qudtUnit> rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/sf/1.1.1LineString
+sf:LineString rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/sf/1.1.1Point
+sf:Point rdf:type owl:Class .
+
+
+###  http://www.opengis.net/ont/sf/1.1.1Polygon
+sf:Polygon rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Datatype
+rdfs:Datatype rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://qudt.org/3.3.0/schema/qudt" uri="https://qudt.org/3.3.0/schema/qudt/"/>
+    <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/sf/1.1.1" uri="https://opengeospatial.github.io/ogc-geosparql/geosparql11/sf_geometries.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/2004/02/skos/core" uri="http://www.w3.org/2004/02/skos/core#"/>
+    <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql#1.1" uri="https://opengeospatial.github.io/ogc-geosparql/geosparql11/geo.ttl"/>
+    <uri id="Imports Wizard Entry" name="https://saref.etsi.org/core/v4.1.1/" uri="https://saref.etsi.org/core/"/>
+    <uri id="Imports Wizard Entry" name="https://saref.etsi.org/core/v3.2.1/" uri="https://saref.etsi.org/core/v3.2.1/saref.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public"/>
+</catalog>

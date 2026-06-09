@@ -1,0 +1,85 @@
+@prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+
+piirrite:PointGeometryShape a sh:NodeShape ;
+    sh:property [
+        sh:path geo:asWKT ;
+        sh:datatype geo:wktLiteral ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "POINT\\b" ;
+    ] .
+
+piirrite:PolylineGeometryShape a sh:NodeShape ;
+    sh:property [
+        sh:path geo:asWKT ;
+        sh:datatype geo:wktLiteral ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "LINESTRING|POLYGON" ;
+    ] .
+
+piirrite:AreaGeometryShape a sh:NodeShape ;
+    sh:property [
+        sh:path geo:asWKT ;
+        sh:datatype geo:wktLiteral ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "POLYGON\\b" ;
+    ] .
+
+piirrite:PointOfInterestShape a sh:NodeShape ;
+    sh:targetClass piirrite:PointOfInterest ;
+
+    # au moins 1 piirrite:hasProperty
+    sh:property [
+        sh:path piirrite:hasProperty ;
+        sh:minCount 1 ;
+    ] ;
+
+    # exactement 1 géométrie de type point
+    sh:property [
+        sh:path geo:hasGeometry ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node piirrite:PointGeometryShape ;
+    ] .
+
+piirrite:PolylineOfInterestShape a sh:NodeShape ;
+    sh:targetClass piirrite:PolylineOfInterest ;
+
+    # au moins 1 piirrite:hasProperty
+    sh:property [
+        sh:path piirrite:hasProperty ;
+        sh:minCount 1 ;
+    ] ;
+
+    # exactement 1 géométrie de type polyligne
+    sh:property [
+        sh:path geo:hasGeometry ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node piirrite:PolylineGeometryShape ;
+    ] .
+
+piirrite:AreaOfInterestShape a sh:NodeShape ;
+    sh:targetClass piirrite:AreaOfInterest ;
+
+    # au moins 1 piirrite:hasProperty
+    sh:property [
+        sh:path piirrite:hasProperty ;
+        sh:minCount 1 ;
+    ] ;
+
+    # exactement 1 géométrie de type région
+    sh:property [
+        sh:path geo:hasGeometry ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:node piirrite:AreaGeometryShape ;
+    ] .

@@ -1,0 +1,31 @@
+@prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+
+piirrite:SpatialPoint a owl:Class ;
+    rdfs:label "Spatial point"@en,
+        "Point spatial"@fr ;
+    rdfs:comment "A dimensionless entity located in a geographic space and contextualised by properties"@en,
+        "Une entité sans dimension localisée dans un espace géographique et contextualisée par des propriétés"@fr ;
+    rdfs:subClassOf geo:Feature,
+        saref:FeatureOfInterest .
+
+piirrite:hasRelatedTag a owl:ObjectProperty ;
+    rdfs:label "has related tag"@en,
+        "a une étiquette liée"@fr ;
+    rdfs:comment "Links a concept to a tag used in combination."@en,
+        "Lie un concept à une étiquette utilisée en combinaison."@fr ;
+    rdfs:domain skos:Concept ;
+    owl:inverseOf piirrite:isTagRelatedTo .
+
+piirrite:isTagRelatedTo a owl:ObjectProperty ;
+    rdfs:label "is a tag related to"@en,
+        "est une étiquette liée à"@fr ;
+    rdfs:comment "Links a tag to the concept it is used in combination with."@en,
+        "Lie une étiquette au concept avec lequel elle est utilisée."@fr ;
+    rdfs:range skos:Concept ;
+    owl:inverseOf piirrite:hasRelatedTag .
+
