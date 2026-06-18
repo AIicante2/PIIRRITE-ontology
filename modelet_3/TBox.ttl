@@ -1,12 +1,10 @@
 @prefix : <http://piirrite.univ-lyon1.fr/ontology/core#> .
-@prefix sf: <http://www.opengis.net/ont/sf/1.1.1> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sf: <http://www.opengis.net/ont/sf/1.1.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix qudt: <http://qudt.org/3.3.0/schema/qudt> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <https://www.w3.org/TR/owl-time/> .
@@ -15,11 +13,19 @@
 @base <http://piirrite.univ-lyon1.fr/ontology/core#> .
 
 <http://piirrite.univ-lyon1.fr/ontology/core#> rdf:type owl:Ontology ;
-                                                owl:imports <http://qudt.org/3.3.0/schema/qudt> ,
-                                                            <http://www.opengis.net/ont/geosparql#1.1> ,
+                                                owl:imports <http://www.opengis.net/ont/geosparql#1.1> ,
                                                             <http://www.opengis.net/ont/sf/1.1.1> ,
                                                             <http://www.w3.org/2004/02/skos/core> ,
                                                             <https://saref.etsi.org/core/v4.1.1/> .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
 
 #################################################################
 #    Object Properties
@@ -35,7 +41,7 @@ piirrite:hasAllowedValue rdf:type owl:ObjectProperty ;
                                     "has allowed value"@en .
 
 
-### http://piirrite.univ-lyon1.fr/ontology/core#hasTemporalValidity
+###  http://piirrite.univ-lyon1.fr/ontology/core#hasTemporalValidity
 piirrite:hasTemporalValidity rdf:type owl:ObjectProperty ;
                              rdfs:domain saref:PropertyValue ;
                              rdfs:range time:Interval ;
@@ -43,16 +49,6 @@ piirrite:hasTemporalValidity rdf:type owl:ObjectProperty ;
                                           "Links a saref property value to its temporal validity window, i.e. the temporal interval during which the value is considered valid. If the temporal validity window isn't specified, it is considered eternal."@en ;
                              rdfs:label "a pour fenêtre de validité temporelle"@fr ,
                                         "has temporal validity window"@en .
-
-
-###  http://piirrite.univ-lyon1.fr/ontology/core#hasUnit
-piirrite:hasUnit rdf:type owl:ObjectProperty ;
-                 rdfs:domain saref:Property ;
-                 rdfs:range qudt:Unit ;
-                 rdfs:comment "Lie une propriété saref à son unité de mesure."@fr ,
-                              "Links a saref property to its measurement unit."@en ;
-                 rdfs:label "a pour unité"@fr ,
-                            "has unit"@en .
 
 
 ###  http://piirrite.univ-lyon1.fr/ontology/core#hasValueDatatype
@@ -77,6 +73,10 @@ piirrite:passesBy rdf:type owl:ObjectProperty ;
                                "Links a navigable path to a point of interest it passes by"@en ;
                   rdfs:label "passe par"@fr ,
                              "passes by"@en .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#member
+rdfs:member rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -106,11 +106,11 @@ piirrite:AreaOfInterest rdf:type owl:Class ;
 
 ###  http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath
 piirrite:NavigablePath rdf:type owl:Class ;
-              rdfs:subClassOf piirrite:PolylineOfInterest ;
-              rdfs:comment "A polyline of interest that can be traveled through"@en ,
-                           "Une polyligne d'intérêt dont le parcours est possible"@fr ;
-              rdfs:label "Chemin navigable"@fr ,
-                         "Navigable path"@en .
+                       rdfs:subClassOf piirrite:PolylineOfInterest ;
+                       rdfs:comment "A polyline of interest that can be traveled through"@en ,
+                                    "Une polyligne d'intérêt dont le parcours est possible"@fr ;
+                       rdfs:label "Chemin navigable"@fr ,
+                                  "Navigable path"@en .
 
 
 ###  http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest
@@ -152,28 +152,36 @@ piirrite:PolylineOfInterest rdf:type owl:Class ;
                                        "Polyline Of Interest"@en .
 
 
-###  http://qudt.org/3.3.0/schema/qudtUnit
-<http://qudt.org/3.3.0/schema/qudtUnit> rdf:type owl:Class .
-
-
-###  http://www.opengis.net/ont/sf/1.1.1LineString
+###  http://www.opengis.net/ont/sf/1.1.1/LineString
 sf:LineString rdf:type owl:Class .
 
 
-###  http://www.opengis.net/ont/sf/1.1.1Point
+###  http://www.opengis.net/ont/sf/1.1.1/Point
 sf:Point rdf:type owl:Class .
 
 
-###  http://www.opengis.net/ont/sf/1.1.1Polygon
+###  http://www.opengis.net/ont/sf/1.1.1/Polygon
 sf:Polygon rdf:type owl:Class .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
+rdf:List rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Class
 rdfs:Class rdf:type owl:Class .
 
 
+###  http://www.w3.org/2000/01/rdf-schema#Container
+rdfs:Container rdf:type owl:Class .
+
+
 ###  http://www.w3.org/2000/01/rdf-schema#Datatype
 rdfs:Datatype rdf:type owl:Class .
+
+
+###  https://www.w3.org/TR/owl-time/Interval
+time:Interval rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://piirrite.univ-lyon1.fr/ontology/core#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://piirrite.univ-lyon1.fr/ontology/core#">
+    <Prefix name="sf" IRI="http://www.opengis.net/ont/sf/1.1.1/"/>
+    <Prefix name="geo" IRI="http://www.opengis.net/ont/geosparql#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="time" IRI="https://www.w3.org/TR/owl-time/"/>
+    <Prefix name="saref" IRI="https://saref.etsi.org/core/"/>
+    <Prefix name="piirrite" IRI="http://piirrite.univ-lyon1.fr/ontology/core#"/>
+    <Import>http://www.opengis.net/ont/geosparql#1.1</Import>
+    <Import>http://www.opengis.net/ont/sf/1.1.1</Import>
+    <Import>http://www.w3.org/2004/02/skos/core</Import>
+    <Import>https://saref.etsi.org/core/v4.1.1/</Import>
+    <Declaration>
+        <Class IRI="AreaOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NavigablePath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PointOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PolylineOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasAllowedValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasTemporalValidity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasValueDatatype"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="passesBy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/license"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdf:List"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/publisher"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Container"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/dateCreated"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sf:Polygon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdfs:member"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/replaces"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/dateModified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/dateIssued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/coyrightNotice"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/copyrightNotice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Class"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/creator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sf:LineString"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sf:Point"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/description"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Datatype"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/name"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:Interval"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="https://schema.org/citation"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="AreaOfInterest"/>
+        <Class abbreviatedIRI="geo:Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AreaOfInterest"/>
+        <Class abbreviatedIRI="saref:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AreaOfInterest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="saref:hasPropertyValue"/>
+            <Class abbreviatedIRI="saref:PropertyValue"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="AreaOfInterest"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+            <Class abbreviatedIRI="sf:Polygon"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="NavigablePath"/>
+        <Class IRI="PolylineOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PointOfInterest"/>
+        <Class abbreviatedIRI="geo:Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PointOfInterest"/>
+        <Class abbreviatedIRI="saref:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PointOfInterest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="saref:hasPropertyValue"/>
+            <Class abbreviatedIRI="saref:PropertyValue"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PointOfInterest"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+            <Class abbreviatedIRI="sf:Point"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PolylineOfInterest"/>
+        <Class abbreviatedIRI="geo:Feature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PolylineOfInterest"/>
+        <Class abbreviatedIRI="saref:FeatureOfInterest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PolylineOfInterest"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="saref:hasPropertyValue"/>
+            <Class abbreviatedIRI="saref:PropertyValue"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PolylineOfInterest"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+            <Class abbreviatedIRI="sf:LineString"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="AreaOfInterest"/>
+        <Class IRI="PointOfInterest"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="AreaOfInterest"/>
+        <Class IRI="PolylineOfInterest"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="PointOfInterest"/>
+        <Class IRI="PolylineOfInterest"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasAllowedValue"/>
+        <Class abbreviatedIRI="saref:Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasTemporalValidity"/>
+        <Class abbreviatedIRI="saref:PropertyValue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasValueDatatype"/>
+        <Class abbreviatedIRI="saref:Property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="passesBy"/>
+        <Class IRI="NavigablePath"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasAllowedValue"/>
+        <Class abbreviatedIRI="skos:Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasTemporalValidity"/>
+        <Class abbreviatedIRI="time:Interval"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasValueDatatype"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="rdfs:Class"/>
+            <Class abbreviatedIRI="rdfs:Datatype"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="passesBy"/>
+        <Class IRI="PointOfInterest"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AreaOfInterest</IRI>
+        <Literal xml:lang="en">A 2D area over a geographic space represented as a polygon and contextualised by properties which are inherited by all context-faring entities contained within the area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>AreaOfInterest</IRI>
+        <Literal xml:lang="fr">Une région 2D d&apos;un espace géographique représentée par un polygon et contextualisée par des propriétés qui sont hérités par toutes les entitées porteuses de contexte contenues dans la région</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AreaOfInterest</IRI>
+        <Literal xml:lang="en">Area of Interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>AreaOfInterest</IRI>
+        <Literal xml:lang="fr">Région d&apos;intérêt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NavigablePath</IRI>
+        <Literal xml:lang="en">A polyline of interest that can be traveled through</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>NavigablePath</IRI>
+        <Literal xml:lang="fr">Une polyligne d&apos;intérêt dont le parcours est possible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NavigablePath</IRI>
+        <Literal xml:lang="fr">Chemin navigable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NavigablePath</IRI>
+        <Literal xml:lang="en">Navigable path</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PointOfInterest</IRI>
+        <Literal xml:lang="en">A dimensionless entity located in a geographic space and contextualised by properties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PointOfInterest</IRI>
+        <Literal xml:lang="fr">Une entité sans dimension localisée dans un espace géographique et contextualisée par des propriétés</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PointOfInterest</IRI>
+        <Literal xml:lang="fr">Point d&apos;intérêt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PointOfInterest</IRI>
+        <Literal xml:lang="en">Point of Interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PolylineOfInterest</IRI>
+        <Literal xml:lang="en">A sequence of 1 or more consecutive segments located in a geographic space and contextualised by properties</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>PolylineOfInterest</IRI>
+        <Literal xml:lang="fr">Une séquence d&apos;1 ou plus segments consécutifs localisée dans un espace géographique et contextualisée par des propriétés</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PolylineOfInterest</IRI>
+        <Literal xml:lang="fr">Polyligne d&apos;intérêt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PolylineOfInterest</IRI>
+        <Literal xml:lang="en">Polyline Of Interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAllowedValue</IRI>
+        <Literal xml:lang="fr">Lie une propriété saref à la description d&apos;une valeur qu&apos;elle peut prendre.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasAllowedValue</IRI>
+        <Literal xml:lang="en">Links a saref property to the description of a value it can have.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasAllowedValue</IRI>
+        <Literal xml:lang="fr">a pour valeur autorisée</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasAllowedValue</IRI>
+        <Literal xml:lang="en">has allowed value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTemporalValidity</IRI>
+        <Literal xml:lang="fr">Lie une valeur de propriété saref à sa fenêtre de validité temporelle, i.e. l&apos;interval temporel pendant lequel la valeur est considérée valide. En l&apos;absence de fenêtre de validité temporelle, celle-ci est considérée éternelle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasTemporalValidity</IRI>
+        <Literal xml:lang="en">Links a saref property value to its temporal validity window, i.e. the temporal interval during which the value is considered valid. If the temporal validity window isn&apos;t specified, it is considered eternal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTemporalValidity</IRI>
+        <Literal xml:lang="fr">a pour fenêtre de validité temporelle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasTemporalValidity</IRI>
+        <Literal xml:lang="en">has temporal validity window</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasValueDatatype</IRI>
+        <Literal xml:lang="fr">Lie une propriété saref à un type que ses valeurs peuvent prendre.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>hasValueDatatype</IRI>
+        <Literal xml:lang="en">Links a saref property to a datatype its values can have</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasValueDatatype</IRI>
+        <Literal xml:lang="fr">a pour type de valeur</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasValueDatatype</IRI>
+        <Literal xml:lang="en">has value datatype</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>passesBy</IRI>
+        <Literal xml:lang="fr">Lie un chemin navigable à un point d&apos;intérêt par lequel il passe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>passesBy</IRI>
+        <Literal xml:lang="en">Links a navigable path to a point of interest it passes by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>passesBy</IRI>
+        <Literal xml:lang="fr">passe par</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>passesBy</IRI>
+        <Literal xml:lang="en">passes by</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
