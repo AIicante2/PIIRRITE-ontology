@@ -1,10 +1,13 @@
 {
   "_comment": "Created with OWL2VOWL (version 0.3.7), http://vowl.visualdataweb.org",
   "header": {
+    "title": {
+        "en": "PIIRRITE ontology",
+        "fr": "Ontologie PIIRRITE"
+    }
     "languages": [
       "en",
-      "fr",
-      "undefined"
+      "fr"
     ],
     "baseIris": [
       "https://saref.etsi.org/core",
@@ -22,33 +25,16 @@
     ],
     "prefixList": {
       "owl": "http://www.w3.org/2002/07/owl#",
-      "vann": "http://purl.org/vocab/vann/",
       "sf": "http://www.opengis.net/ont/sf/1.1.1/",
-      "gsp": "http://www.opengis.net/ont/geosparql#",
-      "sdo": "https://schema.org/",
       "piirrite": "http://piirrite.univ-lyon1.fr/ontology/core#",
-      "ns1130": "mailto:john.herring@",
-      "orcidorg": "ttps://orcid.org/",
-      "catalog": "https://www.opengis.net/def/catalog/",
       "time": "https://www.w3.org/TR/owl-time/",
       "saref": "https://saref.etsi.org/core/",
-      "ns1131": "mailto:joseph.abhayaratna@",
-      "ns1127": "https://defs.opengis.net/org/",
-      "ns349": "http://www.opengis.net/ont/",
-      "ns1135": "http://www.opengis.net/ont/geosparql/",
-      "dcterms": "http://purl.org/dc/terms/",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "dct": "http://purl.org/dc/terms/",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "orc": "https://orcid.org/",
       "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "profile": "https://prez.dev/profile/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "geo": "http://www.opengis.net/ont/geosparql#",
-      "": "http://www.semanticweb.org/owl/owlapi/turtle#",
-      "ogc-cat": "urn:ogc:defs/catalogs/",
-      "xml": "http://www.w3.org/XML/1998/namespace",
-      "prez": "https://prez.dev/"
+      "xml": "http://www.w3.org/XML/1998/namespace"
     },
     "iri": "http://piirrite.univ-lyon1.fr/ontology/core#"
   },
@@ -512,7 +498,7 @@
       },
       "comment": {
         "en": "A polyline of interest that can be traveled through",
-        "fr": "Une polyligne d'intérêt dont le parcours est possible"
+        "fr": "Une polyligne d'int r t dont le parcours est possible"
       },
       "id": "46",
       "superClasses": [
@@ -538,14 +524,14 @@
       "label": {
         "IRI-based": "PolylineOfInterest",
         "en": "Polyline Of Interest",
-        "fr": "Polyligne d'intérêt"
+        "fr": "Polyligne d'int r t"
       },
       "subClasses": [
         "46"
       ],
       "comment": {
         "en": "A sequence of 1 or more consecutive segments located in a geographic space and contextualised by properties",
-        "fr": "Une séquence d'1 ou plus segments consécutifs localisée dans un espace géographique et contextualisée par des propriétés"
+        "fr": "Une s quence d'1 ou plus segments cons cutifs localis e dans un espace g ographique et contextualis e par des propri t s"
       },
       "id": "28",
       "superClasses": [
@@ -1044,7 +1030,7 @@
         "en": "Operation Execution"
       },
       "comment": {
-        "en": "Describes the execution of an operation in a network: the–machine interpretable–  description of a communication between devices over the network. Typically, its input and result are network messages, that conform to the input and output of the executed operation."
+        "en": "Describes the execution of an operation in a network: the machine interpretable   description of a communication between devices over the network. Typically, its input and result are network messages, that conform to the input and output of the executed operation."
       },
       "attributes": [
         "external"
@@ -1202,11 +1188,11 @@
       "label": {
         "IRI-based": "PointOfInterest",
         "en": "Point of Interest",
-        "fr": "Point d'intérêt"
+        "fr": "Point d'int r t"
       },
       "comment": {
         "en": "A dimensionless entity located in a geographic space and contextualised by properties",
-        "fr": "Une entité sans dimension localisée dans un espace géographique et contextualisée par des propriétés"
+        "fr": "Une entit  sans dimension localis e dans un espace g ographique et contextualis e par des propri t s"
       },
       "id": "31",
       "superClasses": [
@@ -1462,7 +1448,7 @@
         "en": "Operation"
       },
       "comment": {
-        "en": "A saref:Operation is the means of a service to communicate in a procedure-type manner over the network (i.e. transmit data to/from other devices). It is the –machine interpretable– exposure of a –human understandable– command to a network."
+        "en": "A saref:Operation is the means of a service to communicate in a procedure-type manner over the network (i.e. transmit data to/from other devices). It is the  machine interpretable  exposure of a  human understandable  command to a network."
       },
       "attributes": [
         "external"
@@ -1783,11 +1769,11 @@
       "label": {
         "IRI-based": "AreaOfInterest",
         "en": "Area of Interest",
-        "fr": "Région d'intérêt"
+        "fr": "R gion d'int r t"
       },
       "comment": {
         "en": "A 2D area over a geographic space represented as a polygon and contextualised by properties which are inherited by all context-faring entities contained within the area",
-        "fr": "Une région 2D d'un espace géographique représentée par un polygon et contextualisée par des propriétés qui sont hérités par toutes les entitées porteuses de contexte contenues dans la région"
+        "fr": "Une r gion 2D d'un espace g ographique repr sent e par un polygon et contextualis e par des propri t s qui sont h rit s par toutes les entit es porteuses de contexte contenues dans la r gion"
       },
       "id": "57",
       "superClasses": [
@@ -3783,12 +3769,12 @@
       "label": {
         "IRI-based": "hasAllowedValue",
         "en": "has allowed value",
-        "fr": "a pour valeur autorisée"
+        "fr": "a pour valeur autoris e"
       },
       "domain": "129",
       "comment": {
         "en": "Links a saref property to the description of a value it can have.",
-        "fr": "Lie une propriété saref à la description d'une valeur qu'elle peut prendre."
+        "fr": "Lie une propri t  saref   la description d'une valeur qu'elle peut prendre."
       },
       "attributes": [
         "object"
@@ -4070,7 +4056,7 @@
       "domain": "129",
       "comment": {
         "en": "Links a saref property to a datatype its values can have",
-        "fr": "Lie une propriété saref à un type que ses valeurs peuvent prendre."
+        "fr": "Lie une propri t  saref   un type que ses valeurs peuvent prendre."
       },
       "attributes": [
         "object"
@@ -4203,7 +4189,7 @@
       "domain": "46",
       "comment": {
         "en": "Links a navigable path to a point of interest it passes by",
-        "fr": "Lie un chemin navigable à un point d'intérêt par lequel il passe"
+        "fr": "Lie un chemin navigable   un point d'int r t par lequel il passe"
       },
       "attributes": [
         "object"
@@ -4333,12 +4319,12 @@
       "label": {
         "IRI-based": "hasTemporalValidity",
         "en": "has temporal validity window",
-        "fr": "a pour fenêtre de validité temporelle"
+        "fr": "a pour fen tre de validit  temporelle"
       },
       "domain": "2",
       "comment": {
         "en": "Links a saref property value to its temporal validity window, i.e. the temporal interval during which the value is considered valid. If the temporal validity window isn't specified, it is considered eternal.",
-        "fr": "Lie une valeur de propriété saref à sa fenêtre de validité temporelle, i.e. l'interval temporel pendant lequel la valeur est considérée valide. En l'absence de fenêtre de validité temporelle, celle-ci est considérée éternelle."
+        "fr": "Lie une valeur de propri t  saref   sa fen tre de validit  temporelle, i.e. l'interval temporel pendant lequel la valeur est consid r e valide. En l'absence de fen tre de validit  temporelle, celle-ci est consid r e  ternelle."
       },
       "attributes": [
         "object"

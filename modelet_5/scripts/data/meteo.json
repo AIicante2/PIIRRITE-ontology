@@ -1,0 +1,1442 @@
+[
+    {
+        "timestamp": "2026-06-04T17:19:40.133649",
+        "location": {
+            "latitude": 45.781663,
+            "longitude": 4.872737
+        },
+        "temperature_c": 19.4,
+        "humidity_percent": 79,
+        "wind_speed_kmh": 7.3,
+        "wind_direction": "E",
+        "precipitation_mm": 8.4,
+        "cloud_cover_percent": 23,
+        "pressure_hpa": 999,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-04T18:19:40.133649",
+        "location": {
+            "latitude": 45.781083,
+            "longitude": 4.872832
+        },
+        "temperature_c": 15.5,
+        "humidity_percent": 47,
+        "wind_speed_kmh": 7.1,
+        "wind_direction": "N",
+        "precipitation_mm": 4.3,
+        "cloud_cover_percent": 40,
+        "pressure_hpa": 1030,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-04T19:19:40.133649",
+        "location": {
+            "latitude": 45.782573,
+            "longitude": 4.872619
+        },
+        "temperature_c": 21.9,
+        "humidity_percent": 60,
+        "wind_speed_kmh": 22.4,
+        "wind_direction": "SW",
+        "precipitation_mm": 6.9,
+        "cloud_cover_percent": 34,
+        "pressure_hpa": 992,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-04T20:19:40.133649",
+        "location": {
+            "latitude": 45.782438,
+            "longitude": 4.872754
+        },
+        "temperature_c": 17.2,
+        "humidity_percent": 47,
+        "wind_speed_kmh": 2.8,
+        "wind_direction": "E",
+        "precipitation_mm": 4.5,
+        "cloud_cover_percent": 57,
+        "pressure_hpa": 1020,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-04T21:19:40.133649",
+        "location": {
+            "latitude": 45.782191,
+            "longitude": 4.87345
+        },
+        "temperature_c": 25.5,
+        "humidity_percent": 86,
+        "wind_speed_kmh": 24.1,
+        "wind_direction": "NW",
+        "precipitation_mm": 3.4,
+        "cloud_cover_percent": 82,
+        "pressure_hpa": 995,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-04T22:19:40.133649",
+        "location": {
+            "latitude": 45.782477,
+            "longitude": 4.873341
+        },
+        "temperature_c": 25.7,
+        "humidity_percent": 58,
+        "wind_speed_kmh": 3.8,
+        "wind_direction": "E",
+        "precipitation_mm": 8.6,
+        "cloud_cover_percent": 26,
+        "pressure_hpa": 1017,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-04T23:19:40.133649",
+        "location": {
+            "latitude": 45.782875,
+            "longitude": 4.872972
+        },
+        "temperature_c": 26.4,
+        "humidity_percent": 93,
+        "wind_speed_kmh": 15.1,
+        "wind_direction": "NE",
+        "precipitation_mm": 8.3,
+        "cloud_cover_percent": 37,
+        "pressure_hpa": 1027,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T00:19:40.133649",
+        "location": {
+            "latitude": 45.781266,
+            "longitude": 4.873465
+        },
+        "temperature_c": 16.7,
+        "humidity_percent": 80,
+        "wind_speed_kmh": 22.7,
+        "wind_direction": "NW",
+        "precipitation_mm": 5.3,
+        "cloud_cover_percent": 37,
+        "pressure_hpa": 1006,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-05T01:19:40.133649",
+        "location": {
+            "latitude": 45.78103,
+            "longitude": 4.872442
+        },
+        "temperature_c": 24.7,
+        "humidity_percent": 58,
+        "wind_speed_kmh": 13.0,
+        "wind_direction": "NE",
+        "precipitation_mm": 2.8,
+        "cloud_cover_percent": 3,
+        "pressure_hpa": 1016,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T02:19:40.133649",
+        "location": {
+            "latitude": 45.781701,
+            "longitude": 4.872374
+        },
+        "temperature_c": 14.1,
+        "humidity_percent": 63,
+        "wind_speed_kmh": 20.4,
+        "wind_direction": "NW",
+        "precipitation_mm": 2.5,
+        "cloud_cover_percent": 60,
+        "pressure_hpa": 1000,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-05T03:19:40.133649",
+        "location": {
+            "latitude": 45.782111,
+            "longitude": 4.873372
+        },
+        "temperature_c": 18.9,
+        "humidity_percent": 48,
+        "wind_speed_kmh": 19.1,
+        "wind_direction": "SE",
+        "precipitation_mm": 3.4,
+        "cloud_cover_percent": 18,
+        "pressure_hpa": 1013,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T04:19:40.133649",
+        "location": {
+            "latitude": 45.781082,
+            "longitude": 4.872187
+        },
+        "temperature_c": 24.4,
+        "humidity_percent": 69,
+        "wind_speed_kmh": 21.4,
+        "wind_direction": "N",
+        "precipitation_mm": 1.8,
+        "cloud_cover_percent": 30,
+        "pressure_hpa": 1005,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-05T05:19:40.133649",
+        "location": {
+            "latitude": 45.781819,
+            "longitude": 4.872163
+        },
+        "temperature_c": 21.8,
+        "humidity_percent": 91,
+        "wind_speed_kmh": 18.2,
+        "wind_direction": "N",
+        "precipitation_mm": 8.6,
+        "cloud_cover_percent": 9,
+        "pressure_hpa": 991,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T06:19:40.133649",
+        "location": {
+            "latitude": 45.781933,
+            "longitude": 4.872957
+        },
+        "temperature_c": 15.5,
+        "humidity_percent": 95,
+        "wind_speed_kmh": 16.4,
+        "wind_direction": "SW",
+        "precipitation_mm": 3.8,
+        "cloud_cover_percent": 67,
+        "pressure_hpa": 1002,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T07:19:40.133649",
+        "location": {
+            "latitude": 45.782399,
+            "longitude": 4.873137
+        },
+        "temperature_c": 20.1,
+        "humidity_percent": 41,
+        "wind_speed_kmh": 21.9,
+        "wind_direction": "SW",
+        "precipitation_mm": 0.7,
+        "cloud_cover_percent": 76,
+        "pressure_hpa": 1029,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T08:19:40.133649",
+        "location": {
+            "latitude": 45.782697,
+            "longitude": 4.872743
+        },
+        "temperature_c": 23.4,
+        "humidity_percent": 88,
+        "wind_speed_kmh": 23.1,
+        "wind_direction": "E",
+        "precipitation_mm": 4.9,
+        "cloud_cover_percent": 99,
+        "pressure_hpa": 1029,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T09:19:40.133649",
+        "location": {
+            "latitude": 45.781675,
+            "longitude": 4.873212
+        },
+        "temperature_c": 15.7,
+        "humidity_percent": 40,
+        "wind_speed_kmh": 22.1,
+        "wind_direction": "W",
+        "precipitation_mm": 9.3,
+        "cloud_cover_percent": 97,
+        "pressure_hpa": 1004,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-05T10:19:40.133649",
+        "location": {
+            "latitude": 45.782526,
+            "longitude": 4.872248
+        },
+        "temperature_c": 23.6,
+        "humidity_percent": 82,
+        "wind_speed_kmh": 2.0,
+        "wind_direction": "E",
+        "precipitation_mm": 5.0,
+        "cloud_cover_percent": 41,
+        "pressure_hpa": 994,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-05T11:19:40.133649",
+        "location": {
+            "latitude": 45.782711,
+            "longitude": 4.872094
+        },
+        "temperature_c": 28.6,
+        "humidity_percent": 84,
+        "wind_speed_kmh": 17.9,
+        "wind_direction": "NE",
+        "precipitation_mm": 7.8,
+        "cloud_cover_percent": 13,
+        "pressure_hpa": 999,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-05T12:19:40.133649",
+        "location": {
+            "latitude": 45.782068,
+            "longitude": 4.872322
+        },
+        "temperature_c": 12.9,
+        "humidity_percent": 79,
+        "wind_speed_kmh": 22.3,
+        "wind_direction": "N",
+        "precipitation_mm": 4.2,
+        "cloud_cover_percent": 82,
+        "pressure_hpa": 1024,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-05T13:19:40.133649",
+        "location": {
+            "latitude": 45.782314,
+            "longitude": 4.873933
+        },
+        "temperature_c": 18.2,
+        "humidity_percent": 64,
+        "wind_speed_kmh": 12.0,
+        "wind_direction": "SW",
+        "precipitation_mm": 9.7,
+        "cloud_cover_percent": 90,
+        "pressure_hpa": 994,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-05T14:19:40.133649",
+        "location": {
+            "latitude": 45.782672,
+            "longitude": 4.873212
+        },
+        "temperature_c": 29.0,
+        "humidity_percent": 89,
+        "wind_speed_kmh": 10.9,
+        "wind_direction": "N",
+        "precipitation_mm": 8.8,
+        "cloud_cover_percent": 9,
+        "pressure_hpa": 1026,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-05T15:19:40.133649",
+        "location": {
+            "latitude": 45.782822,
+            "longitude": 4.872937
+        },
+        "temperature_c": 15.5,
+        "humidity_percent": 84,
+        "wind_speed_kmh": 17.7,
+        "wind_direction": "E",
+        "precipitation_mm": 1.0,
+        "cloud_cover_percent": 53,
+        "pressure_hpa": 1003,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-05T16:19:40.133649",
+        "location": {
+            "latitude": 45.78268,
+            "longitude": 4.872873
+        },
+        "temperature_c": 28.2,
+        "humidity_percent": 60,
+        "wind_speed_kmh": 2.5,
+        "wind_direction": "NE",
+        "precipitation_mm": 9.7,
+        "cloud_cover_percent": 20,
+        "pressure_hpa": 1026,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-05T17:19:40.133649",
+        "location": {
+            "latitude": 45.782889,
+            "longitude": 4.87313
+        },
+        "temperature_c": 14.9,
+        "humidity_percent": 58,
+        "wind_speed_kmh": 14.1,
+        "wind_direction": "SE",
+        "precipitation_mm": 7.7,
+        "cloud_cover_percent": 86,
+        "pressure_hpa": 1025,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T18:19:40.133649",
+        "location": {
+            "latitude": 45.78124,
+            "longitude": 4.873623
+        },
+        "temperature_c": 16.3,
+        "humidity_percent": 79,
+        "wind_speed_kmh": 7.6,
+        "wind_direction": "W",
+        "precipitation_mm": 6.1,
+        "cloud_cover_percent": 88,
+        "pressure_hpa": 999,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-05T19:19:40.133649",
+        "location": {
+            "latitude": 45.781734,
+            "longitude": 4.873639
+        },
+        "temperature_c": 25.0,
+        "humidity_percent": 89,
+        "wind_speed_kmh": 24.3,
+        "wind_direction": "NE",
+        "precipitation_mm": 3.9,
+        "cloud_cover_percent": 5,
+        "pressure_hpa": 1019,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-05T20:19:40.133649",
+        "location": {
+            "latitude": 45.781721,
+            "longitude": 4.873888
+        },
+        "temperature_c": 12.3,
+        "humidity_percent": 85,
+        "wind_speed_kmh": 3.9,
+        "wind_direction": "S",
+        "precipitation_mm": 5.1,
+        "cloud_cover_percent": 54,
+        "pressure_hpa": 1015,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-05T21:19:40.133649",
+        "location": {
+            "latitude": 45.782391,
+            "longitude": 4.872795
+        },
+        "temperature_c": 18.8,
+        "humidity_percent": 87,
+        "wind_speed_kmh": 15.0,
+        "wind_direction": "W",
+        "precipitation_mm": 6.6,
+        "cloud_cover_percent": 18,
+        "pressure_hpa": 1005,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-05T22:19:40.133649",
+        "location": {
+            "latitude": 45.782673,
+            "longitude": 4.872916
+        },
+        "temperature_c": 29.9,
+        "humidity_percent": 74,
+        "wind_speed_kmh": 23.5,
+        "wind_direction": "E",
+        "precipitation_mm": 3.0,
+        "cloud_cover_percent": 69,
+        "pressure_hpa": 1022,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-05T23:19:40.133649",
+        "location": {
+            "latitude": 45.78114,
+            "longitude": 4.873393
+        },
+        "temperature_c": 28.8,
+        "humidity_percent": 55,
+        "wind_speed_kmh": 5.1,
+        "wind_direction": "S",
+        "precipitation_mm": 9.4,
+        "cloud_cover_percent": 39,
+        "pressure_hpa": 1004,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-06T00:19:40.133649",
+        "location": {
+            "latitude": 45.782249,
+            "longitude": 4.872207
+        },
+        "temperature_c": 25.6,
+        "humidity_percent": 82,
+        "wind_speed_kmh": 11.4,
+        "wind_direction": "SW",
+        "precipitation_mm": 0.2,
+        "cloud_cover_percent": 33,
+        "pressure_hpa": 1029,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-06T01:19:40.133649",
+        "location": {
+            "latitude": 45.781261,
+            "longitude": 4.872141
+        },
+        "temperature_c": 27.7,
+        "humidity_percent": 74,
+        "wind_speed_kmh": 10.5,
+        "wind_direction": "NW",
+        "precipitation_mm": 3.5,
+        "cloud_cover_percent": 76,
+        "pressure_hpa": 1009,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-06T02:19:40.133649",
+        "location": {
+            "latitude": 45.781026,
+            "longitude": 4.87264
+        },
+        "temperature_c": 25.1,
+        "humidity_percent": 46,
+        "wind_speed_kmh": 22.5,
+        "wind_direction": "SE",
+        "precipitation_mm": 1.5,
+        "cloud_cover_percent": 46,
+        "pressure_hpa": 1001,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-06T03:19:40.133649",
+        "location": {
+            "latitude": 45.782952,
+            "longitude": 4.872121
+        },
+        "temperature_c": 13.4,
+        "humidity_percent": 56,
+        "wind_speed_kmh": 21.8,
+        "wind_direction": "W",
+        "precipitation_mm": 4.9,
+        "cloud_cover_percent": 88,
+        "pressure_hpa": 1015,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-06T04:19:40.133649",
+        "location": {
+            "latitude": 45.782918,
+            "longitude": 4.872772
+        },
+        "temperature_c": 16.0,
+        "humidity_percent": 89,
+        "wind_speed_kmh": 11.9,
+        "wind_direction": "SE",
+        "precipitation_mm": 9.7,
+        "cloud_cover_percent": 40,
+        "pressure_hpa": 1000,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-06T05:19:40.133649",
+        "location": {
+            "latitude": 45.782438,
+            "longitude": 4.872042
+        },
+        "temperature_c": 25.2,
+        "humidity_percent": 95,
+        "wind_speed_kmh": 23.2,
+        "wind_direction": "S",
+        "precipitation_mm": 5.4,
+        "cloud_cover_percent": 59,
+        "pressure_hpa": 997,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-06T06:19:40.133649",
+        "location": {
+            "latitude": 45.781388,
+            "longitude": 4.872736
+        },
+        "temperature_c": 26.0,
+        "humidity_percent": 78,
+        "wind_speed_kmh": 11.5,
+        "wind_direction": "N",
+        "precipitation_mm": 7.0,
+        "cloud_cover_percent": 27,
+        "pressure_hpa": 1016,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-06T07:19:40.133649",
+        "location": {
+            "latitude": 45.782922,
+            "longitude": 4.873649
+        },
+        "temperature_c": 16.4,
+        "humidity_percent": 48,
+        "wind_speed_kmh": 23.7,
+        "wind_direction": "E",
+        "precipitation_mm": 3.1,
+        "cloud_cover_percent": 50,
+        "pressure_hpa": 1019,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-06T08:19:40.133649",
+        "location": {
+            "latitude": 45.782456,
+            "longitude": 4.872266
+        },
+        "temperature_c": 26.2,
+        "humidity_percent": 91,
+        "wind_speed_kmh": 4.1,
+        "wind_direction": "E",
+        "precipitation_mm": 8.9,
+        "cloud_cover_percent": 29,
+        "pressure_hpa": 1003,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-06T09:19:40.133649",
+        "location": {
+            "latitude": 45.781335,
+            "longitude": 4.872037
+        },
+        "temperature_c": 18.3,
+        "humidity_percent": 92,
+        "wind_speed_kmh": 9.2,
+        "wind_direction": "N",
+        "precipitation_mm": 7.1,
+        "cloud_cover_percent": 13,
+        "pressure_hpa": 1012,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-06T10:19:40.133649",
+        "location": {
+            "latitude": 45.781178,
+            "longitude": 4.872863
+        },
+        "temperature_c": 15.0,
+        "humidity_percent": 62,
+        "wind_speed_kmh": 8.3,
+        "wind_direction": "NW",
+        "precipitation_mm": 9.7,
+        "cloud_cover_percent": 94,
+        "pressure_hpa": 1018,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-06T11:19:40.133649",
+        "location": {
+            "latitude": 45.781831,
+            "longitude": 4.872626
+        },
+        "temperature_c": 14.2,
+        "humidity_percent": 63,
+        "wind_speed_kmh": 12.1,
+        "wind_direction": "NW",
+        "precipitation_mm": 7.1,
+        "cloud_cover_percent": 36,
+        "pressure_hpa": 1019,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-06T12:19:40.133649",
+        "location": {
+            "latitude": 45.782572,
+            "longitude": 4.873355
+        },
+        "temperature_c": 23.0,
+        "humidity_percent": 79,
+        "wind_speed_kmh": 2.4,
+        "wind_direction": "E",
+        "precipitation_mm": 5.6,
+        "cloud_cover_percent": 51,
+        "pressure_hpa": 1029,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-06T13:19:40.133649",
+        "location": {
+            "latitude": 45.78224,
+            "longitude": 4.872619
+        },
+        "temperature_c": 19.9,
+        "humidity_percent": 73,
+        "wind_speed_kmh": 4.6,
+        "wind_direction": "NE",
+        "precipitation_mm": 8.2,
+        "cloud_cover_percent": 69,
+        "pressure_hpa": 993,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-06T14:19:40.133649",
+        "location": {
+            "latitude": 45.782341,
+            "longitude": 4.873936
+        },
+        "temperature_c": 27.9,
+        "humidity_percent": 79,
+        "wind_speed_kmh": 24.3,
+        "wind_direction": "NE",
+        "precipitation_mm": 8.2,
+        "cloud_cover_percent": 35,
+        "pressure_hpa": 1029,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-06T15:19:40.133649",
+        "location": {
+            "latitude": 45.781862,
+            "longitude": 4.872761
+        },
+        "temperature_c": 29.9,
+        "humidity_percent": 76,
+        "wind_speed_kmh": 21.3,
+        "wind_direction": "SE",
+        "precipitation_mm": 0.0,
+        "cloud_cover_percent": 48,
+        "pressure_hpa": 992,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-06T16:19:40.133649",
+        "location": {
+            "latitude": 45.781426,
+            "longitude": 4.872202
+        },
+        "temperature_c": 26.2,
+        "humidity_percent": 51,
+        "wind_speed_kmh": 18.4,
+        "wind_direction": "S",
+        "precipitation_mm": 2.2,
+        "cloud_cover_percent": 83,
+        "pressure_hpa": 1003,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-06T17:19:40.133649",
+        "location": {
+            "latitude": 45.78279,
+            "longitude": 4.872053
+        },
+        "temperature_c": 20.3,
+        "humidity_percent": 46,
+        "wind_speed_kmh": 3.8,
+        "wind_direction": "SW",
+        "precipitation_mm": 2.8,
+        "cloud_cover_percent": 37,
+        "pressure_hpa": 1017,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-06T18:19:40.133649",
+        "location": {
+            "latitude": 45.78274,
+            "longitude": 4.873171
+        },
+        "temperature_c": 24.1,
+        "humidity_percent": 42,
+        "wind_speed_kmh": 19.1,
+        "wind_direction": "NE",
+        "precipitation_mm": 7.9,
+        "cloud_cover_percent": 42,
+        "pressure_hpa": 1030,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-06T19:19:40.133649",
+        "location": {
+            "latitude": 45.782706,
+            "longitude": 4.873689
+        },
+        "temperature_c": 18.5,
+        "humidity_percent": 60,
+        "wind_speed_kmh": 11.1,
+        "wind_direction": "S",
+        "precipitation_mm": 3.9,
+        "cloud_cover_percent": 89,
+        "pressure_hpa": 1025,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-06T20:19:40.133649",
+        "location": {
+            "latitude": 45.782038,
+            "longitude": 4.873944
+        },
+        "temperature_c": 25.9,
+        "humidity_percent": 66,
+        "wind_speed_kmh": 20.6,
+        "wind_direction": "NW",
+        "precipitation_mm": 4.9,
+        "cloud_cover_percent": 72,
+        "pressure_hpa": 1005,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-06T21:19:40.133649",
+        "location": {
+            "latitude": 45.782597,
+            "longitude": 4.872039
+        },
+        "temperature_c": 16.4,
+        "humidity_percent": 73,
+        "wind_speed_kmh": 23.2,
+        "wind_direction": "NE",
+        "precipitation_mm": 6.8,
+        "cloud_cover_percent": 30,
+        "pressure_hpa": 995,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-06T22:19:40.133649",
+        "location": {
+            "latitude": 45.782674,
+            "longitude": 4.872763
+        },
+        "temperature_c": 23.1,
+        "humidity_percent": 89,
+        "wind_speed_kmh": 10.1,
+        "wind_direction": "S",
+        "precipitation_mm": 4.3,
+        "cloud_cover_percent": 35,
+        "pressure_hpa": 1022,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-06T23:19:40.133649",
+        "location": {
+            "latitude": 45.782855,
+            "longitude": 4.873678
+        },
+        "temperature_c": 13.5,
+        "humidity_percent": 52,
+        "wind_speed_kmh": 16.2,
+        "wind_direction": "NW",
+        "precipitation_mm": 8.5,
+        "cloud_cover_percent": 38,
+        "pressure_hpa": 1030,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-07T00:19:40.133649",
+        "location": {
+            "latitude": 45.781584,
+            "longitude": 4.873304
+        },
+        "temperature_c": 21.1,
+        "humidity_percent": 91,
+        "wind_speed_kmh": 18.0,
+        "wind_direction": "SE",
+        "precipitation_mm": 8.5,
+        "cloud_cover_percent": 45,
+        "pressure_hpa": 995,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-07T01:19:40.133649",
+        "location": {
+            "latitude": 45.782405,
+            "longitude": 4.873941
+        },
+        "temperature_c": 29.3,
+        "humidity_percent": 51,
+        "wind_speed_kmh": 22.1,
+        "wind_direction": "SE",
+        "precipitation_mm": 10.0,
+        "cloud_cover_percent": 42,
+        "pressure_hpa": 1006,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-07T02:19:40.133649",
+        "location": {
+            "latitude": 45.782573,
+            "longitude": 4.872914
+        },
+        "temperature_c": 12.6,
+        "humidity_percent": 81,
+        "wind_speed_kmh": 21.6,
+        "wind_direction": "N",
+        "precipitation_mm": 2.3,
+        "cloud_cover_percent": 17,
+        "pressure_hpa": 1014,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-07T03:19:40.133649",
+        "location": {
+            "latitude": 45.7828,
+            "longitude": 4.872995
+        },
+        "temperature_c": 21.1,
+        "humidity_percent": 54,
+        "wind_speed_kmh": 7.6,
+        "wind_direction": "SE",
+        "precipitation_mm": 1.2,
+        "cloud_cover_percent": 78,
+        "pressure_hpa": 1007,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-07T04:19:40.133649",
+        "location": {
+            "latitude": 45.781143,
+            "longitude": 4.873994
+        },
+        "temperature_c": 13.9,
+        "humidity_percent": 50,
+        "wind_speed_kmh": 12.0,
+        "wind_direction": "NW",
+        "precipitation_mm": 9.7,
+        "cloud_cover_percent": 83,
+        "pressure_hpa": 1026,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-07T05:19:40.133649",
+        "location": {
+            "latitude": 45.781681,
+            "longitude": 4.873772
+        },
+        "temperature_c": 12.3,
+        "humidity_percent": 78,
+        "wind_speed_kmh": 17.1,
+        "wind_direction": "SE",
+        "precipitation_mm": 5.2,
+        "cloud_cover_percent": 49,
+        "pressure_hpa": 990,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-07T06:19:40.133649",
+        "location": {
+            "latitude": 45.782206,
+            "longitude": 4.87354
+        },
+        "temperature_c": 27.3,
+        "humidity_percent": 93,
+        "wind_speed_kmh": 15.8,
+        "wind_direction": "NW",
+        "precipitation_mm": 2.9,
+        "cloud_cover_percent": 54,
+        "pressure_hpa": 1009,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-07T07:19:40.133649",
+        "location": {
+            "latitude": 45.78116,
+            "longitude": 4.872595
+        },
+        "temperature_c": 18.3,
+        "humidity_percent": 61,
+        "wind_speed_kmh": 18.2,
+        "wind_direction": "NE",
+        "precipitation_mm": 3.9,
+        "cloud_cover_percent": 11,
+        "pressure_hpa": 1018,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-07T08:19:40.133649",
+        "location": {
+            "latitude": 45.78221,
+            "longitude": 4.873964
+        },
+        "temperature_c": 22.1,
+        "humidity_percent": 88,
+        "wind_speed_kmh": 23.0,
+        "wind_direction": "SE",
+        "precipitation_mm": 5.1,
+        "cloud_cover_percent": 35,
+        "pressure_hpa": 1020,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-07T09:19:40.133649",
+        "location": {
+            "latitude": 45.782216,
+            "longitude": 4.87283
+        },
+        "temperature_c": 27.0,
+        "humidity_percent": 62,
+        "wind_speed_kmh": 11.0,
+        "wind_direction": "NE",
+        "precipitation_mm": 9.7,
+        "cloud_cover_percent": 86,
+        "pressure_hpa": 1026,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-07T10:19:40.133649",
+        "location": {
+            "latitude": 45.782905,
+            "longitude": 4.872783
+        },
+        "temperature_c": 16.3,
+        "humidity_percent": 40,
+        "wind_speed_kmh": 21.6,
+        "wind_direction": "NW",
+        "precipitation_mm": 9.8,
+        "cloud_cover_percent": 2,
+        "pressure_hpa": 1014,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-07T11:19:40.133649",
+        "location": {
+            "latitude": 45.781823,
+            "longitude": 4.872872
+        },
+        "temperature_c": 25.2,
+        "humidity_percent": 51,
+        "wind_speed_kmh": 16.9,
+        "wind_direction": "E",
+        "precipitation_mm": 1.9,
+        "cloud_cover_percent": 95,
+        "pressure_hpa": 1027,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-07T12:19:40.133649",
+        "location": {
+            "latitude": 45.78267,
+            "longitude": 4.873578
+        },
+        "temperature_c": 27.4,
+        "humidity_percent": 50,
+        "wind_speed_kmh": 12.0,
+        "wind_direction": "E",
+        "precipitation_mm": 2.0,
+        "cloud_cover_percent": 64,
+        "pressure_hpa": 1019,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-07T13:19:40.133649",
+        "location": {
+            "latitude": 45.782171,
+            "longitude": 4.872179
+        },
+        "temperature_c": 15.8,
+        "humidity_percent": 83,
+        "wind_speed_kmh": 18.8,
+        "wind_direction": "SW",
+        "precipitation_mm": 4.0,
+        "cloud_cover_percent": 7,
+        "pressure_hpa": 1029,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-07T14:19:40.133649",
+        "location": {
+            "latitude": 45.782532,
+            "longitude": 4.8731
+        },
+        "temperature_c": 14.2,
+        "humidity_percent": 64,
+        "wind_speed_kmh": 15.6,
+        "wind_direction": "SW",
+        "precipitation_mm": 5.1,
+        "cloud_cover_percent": 48,
+        "pressure_hpa": 1010,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-07T15:19:40.133649",
+        "location": {
+            "latitude": 45.781303,
+            "longitude": 4.873783
+        },
+        "temperature_c": 17.8,
+        "humidity_percent": 95,
+        "wind_speed_kmh": 24.4,
+        "wind_direction": "SE",
+        "precipitation_mm": 9.1,
+        "cloud_cover_percent": 15,
+        "pressure_hpa": 1015,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-07T16:19:40.133649",
+        "location": {
+            "latitude": 45.78157,
+            "longitude": 4.872397
+        },
+        "temperature_c": 18.1,
+        "humidity_percent": 83,
+        "wind_speed_kmh": 2.3,
+        "wind_direction": "NW",
+        "precipitation_mm": 2.5,
+        "cloud_cover_percent": 3,
+        "pressure_hpa": 1006,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-07T17:19:40.133649",
+        "location": {
+            "latitude": 45.782969,
+            "longitude": 4.872334
+        },
+        "temperature_c": 26.1,
+        "humidity_percent": 44,
+        "wind_speed_kmh": 1.1,
+        "wind_direction": "N",
+        "precipitation_mm": 6.9,
+        "cloud_cover_percent": 59,
+        "pressure_hpa": 991,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-07T18:19:40.133649",
+        "location": {
+            "latitude": 45.782481,
+            "longitude": 4.87288
+        },
+        "temperature_c": 26.1,
+        "humidity_percent": 89,
+        "wind_speed_kmh": 18.6,
+        "wind_direction": "SW",
+        "precipitation_mm": 5.4,
+        "cloud_cover_percent": 59,
+        "pressure_hpa": 1003,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-07T19:19:40.133649",
+        "location": {
+            "latitude": 45.782507,
+            "longitude": 4.873722
+        },
+        "temperature_c": 19.5,
+        "humidity_percent": 57,
+        "wind_speed_kmh": 11.2,
+        "wind_direction": "E",
+        "precipitation_mm": 3.3,
+        "cloud_cover_percent": 76,
+        "pressure_hpa": 1021,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-07T20:19:40.133649",
+        "location": {
+            "latitude": 45.781313,
+            "longitude": 4.873227
+        },
+        "temperature_c": 22.4,
+        "humidity_percent": 49,
+        "wind_speed_kmh": 6.1,
+        "wind_direction": "W",
+        "precipitation_mm": 7.1,
+        "cloud_cover_percent": 74,
+        "pressure_hpa": 1000,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-07T21:19:40.133649",
+        "location": {
+            "latitude": 45.781086,
+            "longitude": 4.872054
+        },
+        "temperature_c": 16.5,
+        "humidity_percent": 49,
+        "wind_speed_kmh": 13.3,
+        "wind_direction": "W",
+        "precipitation_mm": 3.9,
+        "cloud_cover_percent": 84,
+        "pressure_hpa": 1023,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-07T22:19:40.133649",
+        "location": {
+            "latitude": 45.781532,
+            "longitude": 4.873354
+        },
+        "temperature_c": 17.7,
+        "humidity_percent": 54,
+        "wind_speed_kmh": 9.4,
+        "wind_direction": "W",
+        "precipitation_mm": 7.2,
+        "cloud_cover_percent": 35,
+        "pressure_hpa": 1015,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-07T23:19:40.133649",
+        "location": {
+            "latitude": 45.781554,
+            "longitude": 4.872652
+        },
+        "temperature_c": 14.8,
+        "humidity_percent": 68,
+        "wind_speed_kmh": 1.7,
+        "wind_direction": "NE",
+        "precipitation_mm": 7.8,
+        "cloud_cover_percent": 15,
+        "pressure_hpa": 1000,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-08T00:19:40.133649",
+        "location": {
+            "latitude": 45.781352,
+            "longitude": 4.873741
+        },
+        "temperature_c": 24.2,
+        "humidity_percent": 42,
+        "wind_speed_kmh": 13.1,
+        "wind_direction": "E",
+        "precipitation_mm": 0.1,
+        "cloud_cover_percent": 27,
+        "pressure_hpa": 1012,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-08T01:19:40.133649",
+        "location": {
+            "latitude": 45.78246,
+            "longitude": 4.873392
+        },
+        "temperature_c": 28.1,
+        "humidity_percent": 50,
+        "wind_speed_kmh": 10.1,
+        "wind_direction": "W",
+        "precipitation_mm": 7.4,
+        "cloud_cover_percent": 76,
+        "pressure_hpa": 1009,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-08T02:19:40.133649",
+        "location": {
+            "latitude": 45.782591,
+            "longitude": 4.873116
+        },
+        "temperature_c": 21.1,
+        "humidity_percent": 79,
+        "wind_speed_kmh": 21.7,
+        "wind_direction": "NE",
+        "precipitation_mm": 1.9,
+        "cloud_cover_percent": 74,
+        "pressure_hpa": 1004,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-08T03:19:40.133649",
+        "location": {
+            "latitude": 45.781635,
+            "longitude": 4.872702
+        },
+        "temperature_c": 27.0,
+        "humidity_percent": 61,
+        "wind_speed_kmh": 7.3,
+        "wind_direction": "E",
+        "precipitation_mm": 5.0,
+        "cloud_cover_percent": 40,
+        "pressure_hpa": 999,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-08T04:19:40.133649",
+        "location": {
+            "latitude": 45.781693,
+            "longitude": 4.873834
+        },
+        "temperature_c": 14.7,
+        "humidity_percent": 53,
+        "wind_speed_kmh": 12.5,
+        "wind_direction": "SW",
+        "precipitation_mm": 1.6,
+        "cloud_cover_percent": 89,
+        "pressure_hpa": 1006,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-08T05:19:40.133649",
+        "location": {
+            "latitude": 45.781452,
+            "longitude": 4.872173
+        },
+        "temperature_c": 16.7,
+        "humidity_percent": 41,
+        "wind_speed_kmh": 6.4,
+        "wind_direction": "NE",
+        "precipitation_mm": 1.7,
+        "cloud_cover_percent": 60,
+        "pressure_hpa": 1007,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-08T06:19:40.133649",
+        "location": {
+            "latitude": 45.781414,
+            "longitude": 4.873587
+        },
+        "temperature_c": 13.9,
+        "humidity_percent": 94,
+        "wind_speed_kmh": 21.8,
+        "wind_direction": "N",
+        "precipitation_mm": 8.9,
+        "cloud_cover_percent": 61,
+        "pressure_hpa": 1014,
+        "weather_condition": "cloudy"
+    },
+    {
+        "timestamp": "2026-06-08T07:19:40.133649",
+        "location": {
+            "latitude": 45.781473,
+            "longitude": 4.873869
+        },
+        "temperature_c": 23.4,
+        "humidity_percent": 47,
+        "wind_speed_kmh": 22.8,
+        "wind_direction": "W",
+        "precipitation_mm": 1.3,
+        "cloud_cover_percent": 24,
+        "pressure_hpa": 992,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-08T08:19:40.133649",
+        "location": {
+            "latitude": 45.781804,
+            "longitude": 4.872541
+        },
+        "temperature_c": 22.9,
+        "humidity_percent": 90,
+        "wind_speed_kmh": 12.3,
+        "wind_direction": "E",
+        "precipitation_mm": 2.6,
+        "cloud_cover_percent": 62,
+        "pressure_hpa": 1011,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-08T09:19:40.133649",
+        "location": {
+            "latitude": 45.781045,
+            "longitude": 4.873507
+        },
+        "temperature_c": 13.9,
+        "humidity_percent": 59,
+        "wind_speed_kmh": 1.7,
+        "wind_direction": "E",
+        "precipitation_mm": 1.4,
+        "cloud_cover_percent": 13,
+        "pressure_hpa": 1029,
+        "weather_condition": "partly_cloudy"
+    },
+    {
+        "timestamp": "2026-06-08T10:19:40.133649",
+        "location": {
+            "latitude": 45.782818,
+            "longitude": 4.873955
+        },
+        "temperature_c": 27.4,
+        "humidity_percent": 55,
+        "wind_speed_kmh": 24.1,
+        "wind_direction": "S",
+        "precipitation_mm": 8.8,
+        "cloud_cover_percent": 49,
+        "pressure_hpa": 993,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-08T11:19:40.133649",
+        "location": {
+            "latitude": 45.781527,
+            "longitude": 4.872563
+        },
+        "temperature_c": 17.4,
+        "humidity_percent": 64,
+        "wind_speed_kmh": 14.4,
+        "wind_direction": "NW",
+        "precipitation_mm": 5.3,
+        "cloud_cover_percent": 14,
+        "pressure_hpa": 1002,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-08T12:19:40.133649",
+        "location": {
+            "latitude": 45.78228,
+            "longitude": 4.873333
+        },
+        "temperature_c": 27.5,
+        "humidity_percent": 61,
+        "wind_speed_kmh": 8.2,
+        "wind_direction": "NW",
+        "precipitation_mm": 7.5,
+        "cloud_cover_percent": 51,
+        "pressure_hpa": 1006,
+        "weather_condition": "clear"
+    },
+    {
+        "timestamp": "2026-06-08T13:19:40.133649",
+        "location": {
+            "latitude": 45.782812,
+            "longitude": 4.873263
+        },
+        "temperature_c": 19.2,
+        "humidity_percent": 75,
+        "wind_speed_kmh": 22.8,
+        "wind_direction": "W",
+        "precipitation_mm": 2.9,
+        "cloud_cover_percent": 99,
+        "pressure_hpa": 997,
+        "weather_condition": "rain"
+    },
+    {
+        "timestamp": "2026-06-08T14:19:40.133649",
+        "location": {
+            "latitude": 45.782031,
+            "longitude": 4.872119
+        },
+        "temperature_c": 24.5,
+        "humidity_percent": 86,
+        "wind_speed_kmh": 23.3,
+        "wind_direction": "S",
+        "precipitation_mm": 1.1,
+        "cloud_cover_percent": 0,
+        "pressure_hpa": 1019,
+        "weather_condition": "fog"
+    },
+    {
+        "timestamp": "2026-06-08T15:19:40.133649",
+        "location": {
+            "latitude": 45.782148,
+            "longitude": 4.872088
+        },
+        "temperature_c": 13.5,
+        "humidity_percent": 93,
+        "wind_speed_kmh": 10.1,
+        "wind_direction": "N",
+        "precipitation_mm": 3.7,
+        "cloud_cover_percent": 67,
+        "pressure_hpa": 997,
+        "weather_condition": "thunderstorm"
+    },
+    {
+        "timestamp": "2026-06-08T16:19:40.133649",
+        "location": {
+            "latitude": 45.782761,
+            "longitude": 4.873697
+        },
+        "temperature_c": 26.2,
+        "humidity_percent": 68,
+        "wind_speed_kmh": 7.4,
+        "wind_direction": "NE",
+        "precipitation_mm": 2.9,
+        "cloud_cover_percent": 66,
+        "pressure_hpa": 1020,
+        "weather_condition": "clear"
+    }
+]
