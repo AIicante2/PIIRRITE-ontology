@@ -5,7 +5,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://piirrite.univ-lyon1.fr/ontology/core#">
+     ontologyIRI="http://piirrite.univ-lyon1.fr/ontology/core#"
+     versionIRI="http://piirrite.univ-lyon1.fr/ontology/core/1.0.0">
     <Prefix name="" IRI="http://piirrite.univ-lyon1.fr/ontology/core#"/>
     <Prefix name="sf" IRI="http://www.opengis.net/ont/sf#"/>
     <Prefix name="geo" IRI="http://www.opengis.net/ont/geosparql#"/>
@@ -17,12 +18,54 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
     <Prefix name="saref" IRI="https://saref.etsi.org/core/v4.1.1/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="piirrite" IRI="http://piirrite.univ-lyon1.fr/ontology/core#"/>
     <Import>http://qudt.org/2.1/schema/qudt#</Import>
     <Import>http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf</Import>
     <Import>http://www.w3.org/2004/02/skos/core#</Import>
     <Import>https://saref.etsi.org/core/v4.1.1/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:created"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2026-07-20</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+        <Literal>Laboratoire d&apos;InfoRmatique en Image et Systèmes d&apos;information</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+        <Literal xml:lang="en">PIIRRITE (Pedestrian InclusIve indooR-outdooR ITinerariEs) is an ontology for inclusive pedestrian navigation. It relies on GeoSPARQL, SAREF, OWL-Time, SKOS, etc. It is developed using the SAMOD methodology through successive modelets driven by a set of competency questions reflecting user requirements.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+        <Literal xml:lang="fr">PIIRRITE (Pedestrion InclusIve indooR-outdooR ITinerariEs) est une ontologie pour la navigation piétonne inclusive. Elle repose sur GeoSPARQL, SAREF, OWL-TIME, SKOS, etc. Elle est développée en utilisant la méthodologie SAMOD à travers des modelets successifs dirigés par un ensembe de questions de compétences qui reflètent des exigences utilisateurs.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
+        <IRI>https://creativecommons.org/licenses/by/4.0/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+        <Literal xml:lang="fr">Ontologie PIIRRITE Core</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+        <Literal xml:lang="en">PIIRRITE Core Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal>piirrite</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal>http://piirrite.univ-lyon1.fr/ontology/core#</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>1.0.0</Literal>
+    </Annotation>
     <Declaration>
         <Class IRI="AreaOfInterest"/>
     </Declaration>

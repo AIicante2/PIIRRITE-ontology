@@ -12,8 +12,21 @@
 @prefix saref: <https://saref.etsi.org/core/v4.1.1/> .
 @prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
 @base <http://piirrite.univ-lyon1.fr/ontology/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 
 <http://piirrite.univ-lyon1.fr/ontology/core#> rdf:type owl:Ontology ;
+                                                dcterms:title "PIIRRITE Core Ontology"@en,
+                                                    "Ontologie PIIRRITE Core"@fr ;
+                                                dcterms:description "PIIRRITE (Pedestrian InclusIve indooR-outdooR ITinerariEs) is an ontology for inclusive pedestrian navigation. It relies on GeoSPARQL, SAREF, OWL-Time, SKOS, etc. It is developed using the SAMOD methodology through successive modelets driven by a set of competency questions reflecting user requirements."@en,
+                                                    "PIIRRITE (Pedestrion InclusIve indooR-outdooR ITinerariEs) est une ontologie pour la navigation piétonne inclusive. Elle repose sur GeoSPARQL, SAREF, OWL-TIME, SKOS, etc. Elle est développée en utilisant la méthodologie SAMOD à travers des modelets successifs dirigés par un ensembe de questions de compétences qui reflètent des exigences utilisateurs."@fr ;
+                                                dcterms:creator "Laboratoire d'InfoRmatique en Image et Systèmes d'information";
+                                                dcterms:created "2026-07-20"^^xsd:date ;
+                                                dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                owl:versionIRI <http://piirrite.univ-lyon1.fr/ontology/core/1.0.0> ;
+                                                owl:versionInfo "1.0.0" ;
+                                                vann:preferredNamespacePrefix "piirrite" ;
+                                                vann:preferredNamespaceUri "http://piirrite.univ-lyon1.fr/ontology/core#" ;
                                                 owl:imports qudt: ,
                                                             <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf> ,
                                                             skos: ,
