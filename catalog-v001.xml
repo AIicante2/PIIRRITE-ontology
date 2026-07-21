@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public">
+        <uri id="Automatically generated entry, Timestamp=1784626109900" name="http://piirrite.univ-lyon1.fr/ontology/core" uri="Documentation/ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1784626109900" name="http://piirrite.univ-lyon1.fr/ontology/core#" uri="PIIRRITE.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1784626109900" name="shadowed:http://piirrite.univ-lyon1.fr/ontology/core#" uri="modelet_3/piirrite.owl"/>
+    </group>
+</catalog>

@@ -115,38 +115,10 @@
     
 
 
-    <!-- http://www.w3.org/2001/XMLSchema#maxInclusive -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#maxInclusive"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#minInclusive -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#minInclusive"/>
-    
-
-
     <!-- http://www.w3.org/2001/XMLSchema#pattern -->
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#pattern"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#maxQualifiedCardinality -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxQualifiedCardinality"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
     
 
 
@@ -302,6 +274,13 @@
     
 
 
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -334,7 +313,7 @@
     <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasCondition">
         <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Requirement"/>
         <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
-        <rdfs:comment xml:lang="fr">Lie une exigence a une condition.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Lie une exigence à une condition.</rdfs:comment>
         <rdfs:comment xml:lang="en">Links a requirement to a condition.</rdfs:comment>
         <rdfs:label xml:lang="fr">a pour condition de validité</rdfs:label>
         <rdfs:label xml:lang="en">has condition</rdfs:label>
@@ -521,6 +500,13 @@
 
 
     <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/vbName"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry"/>
     
 
 
@@ -1140,13 +1126,6 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#Container -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Container"/>
     
 
 

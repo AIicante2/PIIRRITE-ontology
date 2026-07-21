@@ -67,24 +67,8 @@
 <http://www.linkedmodel.org/schema/vaem#website> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2001/XMLSchema#maxInclusive
-xsd:maxInclusive rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2001/XMLSchema#minInclusive
-xsd:minInclusive rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.w3.org/2001/XMLSchema#pattern
 xsd:pattern rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#maxQualifiedCardinality
-owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#qualifiedCardinality
-owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 
 ###  https://prez.dev/currentProfile
@@ -171,6 +155,10 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 xsd:anySimpleType rdf:type rdfs:Datatype .
 
 
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
 #################################################################
 #    Object Properties
 #################################################################
@@ -189,7 +177,7 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
 :hasCondition rdf:type owl:ObjectProperty ;
               rdfs:domain :Requirement ;
               rdfs:range :Condition ;
-              rdfs:comment "Lie une exigence a une condition."@fr ,
+              rdfs:comment "Lie une exigence à une condition."@fr ,
                            "Links a requirement to a condition."@en ;
               rdfs:label "a pour condition de validité"@fr ,
                          "has condition"@en .
@@ -315,6 +303,10 @@ xsd:anySimpleType rdf:type rdfs:Datatype .
 
 ###  http://qudt.org/schema/qudt/vbName
 <http://qudt.org/schema/qudt/vbName> rdf:type owl:ObjectProperty .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/prov#wasDerivedFrom
@@ -716,10 +708,6 @@ rdf:Statement rdf:type owl:Class .
 
 ###  http://www.w3.org/2000/01/rdf-schema#Class
 rdfs:Class rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Container
-rdfs:Container rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Datatype

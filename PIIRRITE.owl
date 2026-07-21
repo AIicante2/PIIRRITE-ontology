@@ -124,13 +124,7 @@
         <Class abbreviatedIRI="sf:Polygon"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="rdf:List"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="rdfs:Class"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="rdfs:Container"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="rdfs:Datatype"/>
@@ -181,6 +175,9 @@
         <ObjectProperty IRI="usesOperator"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="geo:hasGeometry"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="saref:hasPropertyValue"/>
     </Declaration>
     <Declaration>
@@ -211,16 +208,10 @@
         <NamedIndividual IRI="OR"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="xsd:maxInclusive"/>
+        <Datatype abbreviatedIRI="xsd:anySimpleType"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="xsd:minInclusive"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:maxQualifiedCardinality"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="owl:qualifiedCardinality"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/schema/qudt/BitEncoding"/>
@@ -557,6 +548,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://qudt.org/schema/qudt/LittleEndian"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdf:List"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://qudt.org/schema/qudt/bits"/>
@@ -1416,7 +1410,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>hasCondition</IRI>
-        <Literal xml:lang="fr">Lie une exigence a une condition.</Literal>
+        <Literal xml:lang="fr">Lie une exigence à une condition.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
