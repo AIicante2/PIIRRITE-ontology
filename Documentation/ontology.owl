@@ -1,0 +1,1864 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://piirrite.univ-lyon1.fr/ontology/core#"
+     xml:base="http://piirrite.univ-lyon1.fr/ontology/core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prez="https://prez.dev/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#">
+        <owl:versionIRI rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core/1.0.0"/>
+        <owl:imports rdf:resource="http://qudt.org/2.1/schema/qudt#"/>
+        <owl:imports rdf:resource="http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+        <owl:imports rdf:resource="https://saref.etsi.org/core/v4.1.1/"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-07-20</terms:created>
+        <terms:creator>Laboratoire d&apos;InfoRmatique en Image et Systèmes d&apos;information</terms:creator>
+        <terms:description xml:lang="en">PIIRRITE (Pedestrian InclusIve indooR-outdooR ITinerariEs) is an ontology for inclusive pedestrian navigation. It relies on GeoSPARQL, SAREF, OWL-Time, SKOS, etc. It is developed using the SAMOD methodology through successive modelets driven by a set of competency questions reflecting user requirements.</terms:description>
+        <terms:description xml:lang="fr">PIIRRITE (Pedestrion InclusIve indooR-outdooR ITinerariEs) est une ontologie pour la navigation piétonne inclusive. Elle repose sur GeoSPARQL, SAREF, OWL-TIME, SKOS, etc. Elle est développée en utilisant la méthodologie SAMOD à travers des modelets successifs dirigés par un ensembe de questions de compétences qui reflètent des exigences utilisateurs.</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="fr">Ontologie PIIRRITE Core</terms:title>
+        <terms:title xml:lang="en">PIIRRITE Core Ontology</terms:title>
+        <vann:preferredNamespacePrefix>piirrite</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://piirrite.univ-lyon1.fr/ontology/core#</vann:preferredNamespaceUri>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#graphName -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.linkedmodel.org/schema/vaem#graphName"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#graphTitle -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.linkedmodel.org/schema/vaem#graphTitle"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#isMetadataFor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.linkedmodel.org/schema/vaem#isMetadataFor"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#website -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.linkedmodel.org/schema/vaem#website"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#maxInclusive -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#maxInclusive"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#minInclusive -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#minInclusive"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#pattern -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2001/XMLSchema#pattern"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#maxQualifiedCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxQualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- https://prez.dev/currentProfile -->
+
+
+    <owl:AnnotationProperty rdf:about="https://prez.dev/currentProfile"/>
+    
+
+
+    <!-- https://prez.dev/description -->
+
+
+    <owl:AnnotationProperty rdf:about="https://prez.dev/description"/>
+    
+
+
+    <!-- https://prez.dev/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="https://prez.dev/identifier"/>
+    
+
+
+    <!-- https://prez.dev/label -->
+
+
+    <owl:AnnotationProperty rdf:about="https://prez.dev/label"/>
+    
+
+
+    <!-- https://prez.dev/link -->
+
+
+    <owl:AnnotationProperty rdf:about="https://prez.dev/link"/>
+    
+
+
+    <!-- https://prez.dev/members -->
+
+
+    <owl:AnnotationProperty rdf:about="https://prez.dev/members"/>
+    
+
+
+    <!-- https://prez.dev/type -->
+
+
+    <owl:AnnotationProperty rdf:about="https://prez.dev/type"/>
+    
+
+
+    <!-- https://schema.org/citation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/citation"/>
+    
+
+
+    <!-- https://schema.org/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/contributor"/>
+    
+
+
+    <!-- https://schema.org/copyrightNotice -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/copyrightNotice"/>
+    
+
+
+    <!-- https://schema.org/coyrightNotice -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/coyrightNotice"/>
+    
+
+
+    <!-- https://schema.org/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/creator"/>
+    
+
+
+    <!-- https://schema.org/dateCreated -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/dateCreated"/>
+    
+
+
+    <!-- https://schema.org/dateIssued -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/dateIssued"/>
+    
+
+
+    <!-- https://schema.org/dateModified -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/dateModified"/>
+    
+
+
+    <!-- https://schema.org/description -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/description"/>
+    
+
+
+    <!-- https://schema.org/license -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/license"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/name"/>
+    
+
+
+    <!-- https://schema.org/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/publisher"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#anySimpleType -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasAllowedValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasAllowedValue">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/v4.1.1/Property"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="fr">Lie une propriété saref à la description d&apos;une valeur qu&apos;elle peut prendre.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a saref property to the description of a value it can have.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour valeur autorisée</rdfs:label>
+        <rdfs:label xml:lang="en">has allowed value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasCondition">
+        <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Requirement"/>
+        <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+        <rdfs:comment xml:lang="fr">Lie une exigence a une condition.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a requirement to a condition.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour condition de validité</rdfs:label>
+        <rdfs:label xml:lang="en">has condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceFactor -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceFactor">
+        <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition"/>
+        <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor"/>
+        <rdfs:comment xml:lang="fr">Lie une condition atomique à un facteur de distance.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links an atomic conditon to a distance factor.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour facteur de distance</rdfs:label>
+        <rdfs:label xml:lang="en">has distance factor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasFlexibility -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasFlexibility">
+        <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Requirement"/>
+        <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Flexibility"/>
+        <rdfs:comment xml:lang="fr">Lie une exigence à un réel entre 0 et 1 représentant le niveau de flexibilité que doit fournir le matching avec les propriétés contextuelles de l&apos;environnement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a requirement to a float between 0 and 1 representing the level of flexibility needed for the matching with contextual environmental properties.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour flexibilité</rdfs:label>
+        <rdfs:label xml:lang="en">has flexibility</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasImportance -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasImportance">
+        <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Requirement"/>
+        <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Importance"/>
+        <rdfs:comment xml:lang="fr">Lie une exigence à son importance.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a requirement to its importance</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour importance</rdfs:label>
+        <rdfs:label xml:lang="en">has importance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasOperand -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasOperand">
+        <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition"/>
+        <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+        <rdfs:comment xml:lang="fr">Lie une condition composée à l&apos;un de ses opérandes.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a composed condition to one of its operands.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour opérande</rdfs:label>
+        <rdfs:label xml:lang="en">has operand</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasRequirement">
+        <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#UserProfile"/>
+        <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Requirement"/>
+        <rdfs:comment xml:lang="fr">Lie un profil utilisateur à une exigence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a user profile to a requirement.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour exigence</rdfs:label>
+        <rdfs:label xml:lang="en">has requirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasTargetProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasTargetProperty">
+        <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/v4.1.1/Property"/>
+        <rdfs:comment xml:lang="fr">Lie une condition à la propriété contextuelle à laquelle elle se rapporte.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a condition to the contextual property to which it relates.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour propriété cible</rdfs:label>
+        <rdfs:label xml:lang="en">has target property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasTemporalValidity -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasTemporalValidity">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/core/v4.1.1/PropertyValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
+        <rdfs:comment xml:lang="fr">Lie une valeur de propriété saref à sa fenêtre de validité temporelle, i.e. l&apos;interval temporel pendant lequel la valeur est considérée valide. En l&apos;absence de fenêtre de validité temporelle, celle-ci est considérée éternelle.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a saref property value to its temporal validity window, i.e. the temporal interval during which the value is considered valid. If the temporal validity window isn&apos;t specified, it is considered eternal.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour fenêtre de validité temporelle</rdfs:label>
+        <rdfs:label xml:lang="en">has temporal validity window</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#passesBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#passesBy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest"/>
+        <rdfs:comment xml:lang="fr">Lie un chemin navigable à un point d&apos;intérêt par lequel il passe</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a navigable path to a point of interest it passes by</rdfs:comment>
+        <rdfs:label xml:lang="fr">passe par</rdfs:label>
+        <rdfs:label xml:lang="en">passes by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#usesOperator -->
+
+
+    <owl:ObjectProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#usesOperator">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Operator"/>
+        <rdfs:comment xml:lang="fr">Lie une condition à l&apos;opérateur qui doit être employé lors du matching avec les propriétés contextulles de l&apos;environnement.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a condition to the operator to use for the matching with contextual environmental properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses operator</rdfs:label>
+        <rdfs:label xml:lang="fr">utilise l&apos;opérateur</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/ansiSQLName -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/ansiSQLName"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/cName -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/cName"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/oracleSQLName -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/oracleSQLName"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/protocolBuffersName -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/protocolBuffersName"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/pythonName -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/pythonName"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/vbName -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/vbName"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
+    <!-- https://saref.etsi.org/core/v4.1.1/hasPropertyValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/v4.1.1/hasPropertyValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceType">
+        <rdfs:domain rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="fr">Lie un facteur de distance à la façon dont elle est calculée, e.g. à vol d&apos;oiseau, en suivant les chemins humains, en utilisant la propriété &apos;passe par&apos;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a distance factor to the way it is computed, e.g. from bird flight, by following humain pathways, by using the &apos;passes by&apos; property.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour type de distance</rdfs:label>
+        <rdfs:label xml:lang="en">has distance type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasRequiredValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasRequiredValue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+        <rdfs:comment xml:lang="fr">Lie une condition à une valeur considérée comme valide.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a condition to a value that is considered valid.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour valeur exigée</rdfs:label>
+        <rdfs:label xml:lang="en">has required value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#hasValue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#Flexibility"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#Importance"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="fr">Lie une enveloppe de valeur à sa valeur.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a value wrapper to its value.</rdfs:comment>
+        <rdfs:label xml:lang="fr">a pour valeur</rdfs:label>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/bits -->
+
+
+    <owl:DatatypeProperty rdf:about="http://qudt.org/schema/qudt/bits"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/length -->
+
+
+    <owl:DatatypeProperty rdf:about="http://qudt.org/schema/qudt/length"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#AreaOfInterest -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#AreaOfInterest">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/v4.1.1/hasPropertyValue"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/v4.1.1/PropertyValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.opengis.net/ont/sf#Polygon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest"/>
+        <owl:disjointWith rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest"/>
+        <rdfs:comment xml:lang="en">A 2D area over a geographic space represented as a polygon and contextualised by properties which are inherited by all context-faring entities contained within the area</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une région 2D d&apos;un espace géographique représentée par un polygon et contextualisée par des propriétés qui sont hérités par toutes les entitées porteuses de contexte contenues dans la région</rdfs:comment>
+        <rdfs:label xml:lang="en">Area of Interest</rdfs:label>
+        <rdfs:label xml:lang="fr">Région d&apos;intérêt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition">
+        <rdfs:subClassOf rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasTargetProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/v4.1.1/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#usesOperator"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceFactor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasRequiredValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition"/>
+        <rdfs:comment xml:lang="en">A condition that a spatial element should meet in order to be considered valid from the corresponding property standpoint.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une condition qu&apos;un élément spatial doit respecter pour être considéré valide du point de vue de la propriété correspondante.</rdfs:comment>
+        <rdfs:label xml:lang="en">Atomic condition</rdfs:label>
+        <rdfs:label xml:lang="fr">Condition atomique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#EQUALS"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#GREATER_THAN"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#LESSER_THAN"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Operator"/>
+        <rdfs:comment xml:lang="en">An operator usable for the matching between a validity condition and the value of a contextual property. e.g. equality, membership, difference, superiority, etc.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un opérateur utilisable lors du matching entre une condition de validité et une valeur de propriété contextuelle. e.g. égalité, appartenance, différence, supériorité, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Comparison operator</rdfs:label>
+        <rdfs:label xml:lang="fr">Opérateur de comparaison</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition">
+        <rdfs:subClassOf rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasOperand"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#usesOperator"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasOperand"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A condition composed of a logical operator and one or two operands that are themselves conditions.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une condition composée d&apos;un opérateur logique et d&apos;un ou deux opérande étant eux-mêmes des conditions.</rdfs:comment>
+        <rdfs:label xml:lang="en">Composed condition</rdfs:label>
+        <rdfs:label xml:lang="fr">Condition composée</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#Condition -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#Condition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A condition that a spatial element should meet in order to be considered valid.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une condition qu&apos;un élément spatial doit respecter pour être considéré valide.</rdfs:comment>
+        <rdfs:label xml:lang="en">Condition</rdfs:label>
+        <rdfs:label xml:lang="fr">Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#passesBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#usesOperator"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasRequiredValue"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A distance factor for the corresponding condition to be considered respected.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un facteur de distance pour que la condition correspondante soit considérée respectée.</rdfs:comment>
+        <rdfs:label xml:lang="en">Distance factor</rdfs:label>
+        <rdfs:label xml:lang="fr">Facteur de distance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#Flexibility -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#Flexibility">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A value wrapper representing the flexilibty of a requirement using a float between 0 and 1.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une enveloppe de valeur décrivant la flexibilité d&apos;une exigence par un réel entre 0 et 1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Flexibility</rdfs:label>
+        <rdfs:label xml:lang="fr">Flexibilité</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#Importance -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#Importance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A value wrapper representing the importance of a requirement using a float between 0 and 1. The importance can also be equal to INF if the requirement is mandatory.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une enveloppe de valeur décrivant l&apos;importance d&apos;une exigence par un réel entre 0 et 1. L&apos;importance peut également valoir INF si le besoin doit obligatoirement être respecté lors de la génération d&apos;itinéraires.</rdfs:comment>
+        <rdfs:label xml:lang="en">Importance</rdfs:label>
+        <rdfs:label xml:lang="fr">Importance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#AND"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#NOT"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#OR"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Operator"/>
+        <rdfs:comment xml:lang="en">An operator usable for combining conditions into a composed validity expression.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un opérateur utilisable pour combiner des conditions en une expression de validité composée.</rdfs:comment>
+        <rdfs:label xml:lang="en">Logical operator</rdfs:label>
+        <rdfs:label xml:lang="fr">Opérateur logique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath">
+        <rdfs:subClassOf rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest"/>
+        <rdfs:comment xml:lang="en">A polyline of interest that can be traveled through</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une polyligne d&apos;intérêt dont le parcours est possible</rdfs:comment>
+        <rdfs:label xml:lang="fr">Chemin navigable</rdfs:label>
+        <rdfs:label xml:lang="en">Navigable path</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#Operator -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#Operator">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator"/>
+                    <rdf:Description rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A comparison or logical operator.</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Un opérateur logique ou de comparaison.</rdfs:comment>
+        <rdfs:label xml:lang="en">Operator</rdfs:label>
+        <rdfs:label xml:lang="fr">Opérateur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/v4.1.1/hasPropertyValue"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/v4.1.1/PropertyValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.opengis.net/ont/sf#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest"/>
+        <rdfs:comment xml:lang="en">A dimensionless entity located in a geographic space and contextualised by properties</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une entité sans dimension localisée dans un espace géographique et contextualisée par des propriétés</rdfs:comment>
+        <rdfs:label xml:lang="fr">Point d&apos;intérêt</rdfs:label>
+        <rdfs:label xml:lang="en">Point of Interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/v4.1.1/hasPropertyValue"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/v4.1.1/PropertyValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.opengis.net/ont/sf#LineString"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sequence of 1 or more consecutive segments located in a geographic space and contextualised by properties</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une séquence d&apos;1 ou plus segments consécutifs localisée dans un espace géographique et contextualisée par des propriétés</rdfs:comment>
+        <rdfs:label xml:lang="fr">Polyligne d&apos;intérêt</rdfs:label>
+        <rdfs:label xml:lang="en">Polyline Of Interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#Requirement -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#Requirement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasCondition"/>
+                <owl:allValuesFrom rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasFlexibility"/>
+                <owl:allValuesFrom rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Flexibility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasImportance"/>
+                <owl:allValuesFrom rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Importance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasCondition"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Condition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A user requirement, represented by its importance, its rigor and one or many validity conditions</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Une exigence d&apos;un utilisateur, représentée par son importance, sa rigueur et une ou plusieurs conditions de validité.</rdfs:comment>
+        <rdfs:label xml:lang="fr">Exigence</rdfs:label>
+        <rdfs:label xml:lang="en">Requirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#UserProfile -->
+
+
+    <owl:Class rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#UserProfile">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#hasRequirement"/>
+                <owl:allValuesFrom rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#Requirement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A user profile, described by a set of requirement (eg. &apos;I want to use elevators&apos;) rather than by personnal characteristics (eg. I&apos;m in a wheelchair).</rdfs:comment>
+        <rdfs:comment xml:lang="fr">Le profil d&apos;un utilisateur, décrit par un ensemble d&apos;exigences (eg. &apos;Je veux prendre l&apos;ascenseur&apos;) plutôt que par des caractéristiques personnels (eg. &apos;Je suis en fauteuil&apos;).</rdfs:comment>
+        <rdfs:label xml:lang="fr">Profil utilisateur</rdfs:label>
+        <rdfs:label xml:lang="en">User profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Aspect -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Aspect"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/EnumeratedQuantity -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/EnumeratedQuantity"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/SignednessType -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/SignednessType"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/StringEncodingType -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/StringEncodingType"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/SymmetricRelation -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/SymmetricRelation"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Verifiable -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Verifiable"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#CatalogEntry -->
+
+
+    <owl:Class rdf:about="http://www.linkedmodel.org/schema/vaem#CatalogEntry"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#LineString -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/sf#LineString"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#Point -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/sf#Point"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#Polygon -->
+
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/sf#Polygon"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Class -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Container -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Container"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Datatype -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gDay -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonth -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gMonthDay -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gMonthDay"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYear -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gYear"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#gYearMonth -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#gYearMonth"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Ontology -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Ontology"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    
+
+
+    <!-- https://saref.etsi.org/core/v4.1.1/FeatureOfInterest -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest"/>
+    
+
+
+    <!-- https://saref.etsi.org/core/v4.1.1/Property -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/v4.1.1/Property"/>
+    
+
+
+    <!-- https://saref.etsi.org/core/v4.1.1/PropertyValue -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/v4.1.1/PropertyValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Category:Units_of_angle -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Category:Units_of_angle"/>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#AND -->
+
+
+    <owl:NamedIndividual rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#AND">
+        <rdf:type rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator"/>
+        <rdfs:label xml:lang="en">and</rdfs:label>
+        <rdfs:label xml:lang="fr">et</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#EQUALS -->
+
+
+    <owl:NamedIndividual rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#EQUALS">
+        <rdf:type rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator"/>
+        <rdfs:label xml:lang="en">equals</rdfs:label>
+        <rdfs:label xml:lang="fr">égal à</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#GREATER_THAN -->
+
+
+    <owl:NamedIndividual rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#GREATER_THAN">
+        <rdf:type rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator"/>
+        <rdfs:label xml:lang="en">greater than</rdfs:label>
+        <rdfs:label xml:lang="fr">supérieur à</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#LESSER_THAN -->
+
+
+    <owl:NamedIndividual rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#LESSER_THAN">
+        <rdf:type rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator"/>
+        <rdfs:label xml:lang="fr">inférieur à</rdfs:label>
+        <rdfs:label xml:lang="en">less than</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#NOT -->
+
+
+    <owl:NamedIndividual rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#NOT">
+        <rdf:type rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator"/>
+        <rdfs:label xml:lang="en">not</rdfs:label>
+        <rdfs:label xml:lang="fr">pas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://piirrite.univ-lyon1.fr/ontology/core#OR -->
+
+
+    <owl:NamedIndividual rdf:about="http://piirrite.univ-lyon1.fr/ontology/core#OR">
+        <rdf:type rdf:resource="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator"/>
+        <rdfs:label xml:lang="en">or</rdfs:label>
+        <rdfs:label xml:lang="fr">ou</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/AngleUnit -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/AngleUnit"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Aspect -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Aspect"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/BigEndian -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/BigEndian"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/BitEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/BitEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/BooleanEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/BooleanEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/CT_FINITE -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CT_FINITE"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/CT_UNCOUNTABLE -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CT_UNCOUNTABLE"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/CardinalityType -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CardinalityType"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/CharEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/CharEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/DerivedUnit -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/DerivedUnit"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/DoublePrecisionEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/DoublePrecisionEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/EndianType -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/EndianType"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/EnumeratedQuantity -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/EnumeratedQuantity"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Enumeration -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Enumeration"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/IEEE754_1985RealEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/IEEE754_1985RealEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/ISO8601-UTCDateTime-BasicFormat -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/ISO8601-UTCDateTime-BasicFormat"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/LittleEndian -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/LittleEndian"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/LongUnsignedIntegerEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/LongUnsignedIntegerEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/OctetEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/OctetEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/PartiallyOrdered -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/PartiallyOrdered"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/PhysicalConstant -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/PhysicalConstant"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Quantity -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Quantity"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/SIGNED -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/SIGNED"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/ScaleType -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/ScaleType"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/ShortSignedIntegerEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/ShortSignedIntegerEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/ShortUnsignedIntegerEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/ShortUnsignedIntegerEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/SignedIntegerEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/SignedIntegerEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/SinglePrecisionRealEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/SinglePrecisionRealEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/TotallyOrdered -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/TotallyOrdered"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/UNSIGNED -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/UNSIGNED"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Unordered -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Unordered"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/UnsignedIntegerEncoding -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/UnsignedIntegerEncoding"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Verifiable -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/Verifiable"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/allowedUnitOfSystem -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/allowedUnitOfSystem"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/applicableSystem -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/applicableSystem"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/code -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/code"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/coherentUnitOfSystem -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/coherentUnitOfSystem"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/derivedQuantityKindOfSystem -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/derivedQuantityKindOfSystem"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/exactMatch -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/exactMatch"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/fieldCode -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/fieldCode"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/generalization -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/generalization"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/hasCitation -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/hasCitation"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/hasNonCoherentUnit -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/hasNonCoherentUnit"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/hasUnit -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/hasUnit"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/hasVocabulary -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/hasVocabulary"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/isBaseQuantityKindOfSystem -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/isBaseQuantityKindOfSystem"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/isQuantityKindOf -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/isQuantityKindOf"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/specialization -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/specialization"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/unit -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/schema/qudt/unit"/>
+    
+
+
+    <!-- http://qudt.org/vocab/type/BigEndian -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/type/BigEndian"/>
+    
+
+
+    <!-- http://qudt.org/vocab/type/LittleEndian -->
+
+
+    <owl:NamedIndividual rdf:about="http://qudt.org/vocab/type/LittleEndian"/>
+    
+
+
+    <!-- http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry -->
+
+
+    <owl:NamedIndividual rdf:about="http://voag.linkedmodel.org/schema/voag#QUDT-SchemaCatalogEntry"/>
+    
+
+
+    <!-- http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US -->
+
+
+    <owl:NamedIndividual rdf:about="http://voag.linkedmodel.org/voag/CC-SHAREALIKE_3PT0-US"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/dtype -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/dtype"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/dtype#GMD_DTYPE -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/dtype#GMD_DTYPE"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#CollectionGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#CollectionGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#ConstraintsGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ConstraintsGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#ControllersGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ControllersGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#CurationGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#CurationGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#DataGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#DataGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#DocumentationGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#DocumentationGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#FunctionsGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#FunctionsGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#GMD_VAEM -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#GMD_VAEM"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#LinkSetGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#LinkSetGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#MappingGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#MappingGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#ProxyGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ProxyGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#QUDT -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#QUDT"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#RulesGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#RulesGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#SchemaGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#SchemaGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#ScriptGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ScriptGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#TopQuadrant -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#TopQuadrant"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#TransformsGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#TransformsGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#ViewGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#ViewGraph"/>
+    
+
+
+    <!-- http://www.linkedmodel.org/schema/vaem#VocabularyGraph -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.linkedmodel.org/schema/vaem#VocabularyGraph"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

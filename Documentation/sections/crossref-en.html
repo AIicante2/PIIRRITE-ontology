@@ -1,0 +1,833 @@
+<h2 id="crossreference" class="list">Cross-reference for PIIRRITE Core Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by PIIRRITE Core Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AreaOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#AreaOfInterest">Area of Interest</a></li>
+  <li><a href="#AtomicCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition">Atomic condition</a></li>
+  <li><a href="#ComparisonOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator">Comparison operator</a></li>
+  <li><a href="#ComposedCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition">Composed condition</a></li>
+  <li><a href="#Condition" title="http://piirrite.univ-lyon1.fr/ontology/core#Condition">Condition</a></li>
+  <li><a href="#DistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor">Distance factor</a></li>
+  <li><a href="#Flexibility" title="http://piirrite.univ-lyon1.fr/ontology/core#Flexibility">Flexibility</a></li>
+  <li><a href="#Importance" title="http://piirrite.univ-lyon1.fr/ontology/core#Importance">Importance</a></li>
+  <li><a href="#LogicalOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator">Logical operator</a></li>
+  <li><a href="#NavigablePath" title="http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath">Navigable path</a></li>
+  <li><a href="#Operator" title="http://piirrite.univ-lyon1.fr/ontology/core#Operator">Operator</a></li>
+  <li><a href="#PointOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest">Point of Interest</a></li>
+  <li><a href="#PolylineOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest">Polyline Of Interest</a></li>
+  <li><a href="#Requirement" title="http://piirrite.univ-lyon1.fr/ontology/core#Requirement">Requirement</a></li>
+  <li><a href="#UserProfile" title="http://piirrite.univ-lyon1.fr/ontology/core#UserProfile">User profile</a></li>
+ </ul>
+ <div class="entity" id="AreaOfInterest">
+  <h3>Area of Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#AreaOfInterest</p>
+  <div class="comment">
+   <span class="markdown">A 2D area over a geographic space represented as a polygon and contextualised by properties which are inherited by all context-faring entities contained within the area</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.opengis.net/ont/geosparql#Feature" target="_blank" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>, <a href="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest" target="_blank" title="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#PointOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="#PolylineOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest">Polyline Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AtomicCondition">
+  <h3>Atomic condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition</p>
+  <div class="comment">
+   <span class="markdown">A condition that a spatial element should meet in order to be considered valid from the corresponding property standpoint.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Condition" title="http://piirrite.univ-lyon1.fr/ontology/core#Condition">Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceFactor">has distance factor</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRequiredValue" title="http://piirrite.univ-lyon1.fr/ontology/core#hasRequiredValue">has required value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTargetProperty" title="http://piirrite.univ-lyon1.fr/ontology/core#hasTargetProperty">has target property</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ComposedCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition">Composed condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComparisonOperator">
+  <h3>Comparison operator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator</p>
+  <div class="comment">
+   <span class="markdown">An operator usable for the matching between a validity condition and the value of a contextual property. e.g. equality, membership, difference, superiority, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    { <a href="#EQUALS" title="http://piirrite.univ-lyon1.fr/ontology/core#EQUALS">equals</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="#GREATER_THAN" title="http://piirrite.univ-lyon1.fr/ontology/core#GREATER_THAN">greater than</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="#LESSER_THAN" title="http://piirrite.univ-lyon1.fr/ontology/core#LESSER_THAN">less than</a> <sup class="type-ni" title="named individual">ni</sup> }
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Operator" title="http://piirrite.univ-lyon1.fr/ontology/core#Operator">Operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#EQUALS" title="http://piirrite.univ-lyon1.fr/ontology/core#EQUALS">equals</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#GREATER_THAN" title="http://piirrite.univ-lyon1.fr/ontology/core#GREATER_THAN">greater than</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#LESSER_THAN" title="http://piirrite.univ-lyon1.fr/ontology/core#LESSER_THAN">less than</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComposedCondition">
+  <h3>Composed condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition</p>
+  <div class="comment">
+   <span class="markdown">A condition composed of a logical operator and one or two operands that are themselves conditions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Condition" title="http://piirrite.univ-lyon1.fr/ontology/core#Condition">Condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasOperand" title="http://piirrite.univ-lyon1.fr/ontology/core#hasOperand">has operand</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AtomicCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition">Atomic condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Condition">
+  <h3>Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#Condition</p>
+  <div class="comment">
+   <span class="markdown">A condition that a spatial element should meet in order to be considered valid.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#AtomicCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition">Atomic condition</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#ComposedCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition">Composed condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AtomicCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition">Atomic condition</a> <sup class="type-c" title="class">c</sup>, <a href="#ComposedCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition">Composed condition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#usesOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#usesOperator">uses operator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#hasCondition">has condition</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasOperand" title="http://piirrite.univ-lyon1.fr/ontology/core#hasOperand">has operand</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DistanceFactor">
+  <h3>Distance factor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor</p>
+  <div class="comment">
+   <span class="markdown">A distance factor for the corresponding condition to be considered respected.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDistanceType" title="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceType">has distance type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRequiredValue" title="http://piirrite.univ-lyon1.fr/ontology/core#hasRequiredValue">has required value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#passesBy" title="http://piirrite.univ-lyon1.fr/ontology/core#passesBy">passes by</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#usesOperator">uses operator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasDistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceFactor">has distance factor</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Flexibility">
+  <h3>Flexibility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#Flexibility</p>
+  <div class="comment">
+   <span class="markdown">A value wrapper representing the flexilibty of a requirement using a float between 0 and 1.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasValue" title="http://piirrite.univ-lyon1.fr/ontology/core#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasFlexibility" title="http://piirrite.univ-lyon1.fr/ontology/core#hasFlexibility">has flexibility</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Importance">
+  <h3>Importance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#Importance</p>
+  <div class="comment">
+   <span class="markdown">A value wrapper representing the importance of a requirement using a float between 0 and 1. The importance can also be equal to INF if the requirement is mandatory.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasValue" title="http://piirrite.univ-lyon1.fr/ontology/core#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasImportance" title="http://piirrite.univ-lyon1.fr/ontology/core#hasImportance">has importance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LogicalOperator">
+  <h3>Logical operator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator</p>
+  <div class="comment">
+   <span class="markdown">An operator usable for combining conditions into a composed validity expression.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    { <a href="#AND" title="http://piirrite.univ-lyon1.fr/ontology/core#AND">and</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="#NOT" title="http://piirrite.univ-lyon1.fr/ontology/core#NOT">not</a> <sup class="type-ni" title="named individual">ni</sup> , <a href="#OR" title="http://piirrite.univ-lyon1.fr/ontology/core#OR">or</a> <sup class="type-ni" title="named individual">ni</sup> }
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Operator" title="http://piirrite.univ-lyon1.fr/ontology/core#Operator">Operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#AND" title="http://piirrite.univ-lyon1.fr/ontology/core#AND">and</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#NOT" title="http://piirrite.univ-lyon1.fr/ontology/core#NOT">not</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#OR" title="http://piirrite.univ-lyon1.fr/ontology/core#OR">or</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NavigablePath">
+  <h3>Navigable path<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath</p>
+  <div class="comment">
+   <span class="markdown">A polyline of interest that can be traveled through</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#PolylineOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest">Polyline Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#passesBy" title="http://piirrite.univ-lyon1.fr/ontology/core#passesBy">passes by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Operator">
+  <h3>Operator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#Operator</p>
+  <div class="comment">
+   <span class="markdown">A comparison or logical operator.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#ComparisonOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator">Comparison operator</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#LogicalOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator">Logical operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ComparisonOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator">Comparison operator</a> <sup class="type-c" title="class">c</sup>, <a href="#LogicalOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator">Logical operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#usesOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#usesOperator">uses operator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PointOfInterest">
+  <h3>Point of Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest</p>
+  <div class="comment">
+   <span class="markdown">A dimensionless entity located in a geographic space and contextualised by properties</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.opengis.net/ont/geosparql#Feature" target="_blank" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>, <a href="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest" target="_blank" title="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#passesBy" title="http://piirrite.univ-lyon1.fr/ontology/core#passesBy">passes by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AreaOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#AreaOfInterest">Area of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="#PolylineOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest">Polyline Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PolylineOfInterest">
+  <h3>Polyline Of Interest<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#PolylineOfInterest</p>
+  <div class="comment">
+   <span class="markdown">A sequence of 1 or more consecutive segments located in a geographic space and contextualised by properties</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.opengis.net/ont/geosparql#Feature" target="_blank" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a> <sup class="type-c" title="class">c</sup>, <a href="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest" target="_blank" title="https://saref.etsi.org/core/v4.1.1/FeatureOfInterest">Feature Of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#NavigablePath" title="http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath">Navigable path</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#AreaOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#AreaOfInterest">Area of Interest</a> <sup class="type-c" title="class">c</sup>, <a href="#PointOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Requirement">
+  <h3>Requirement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#Requirement</p>
+  <div class="comment">
+   <span class="markdown">A user requirement, represented by its importance, its rigor and one or many validity conditions</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#hasCondition">has condition</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFlexibility" title="http://piirrite.univ-lyon1.fr/ontology/core#hasFlexibility">has flexibility</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImportance" title="http://piirrite.univ-lyon1.fr/ontology/core#hasImportance">has importance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasRequirement" title="http://piirrite.univ-lyon1.fr/ontology/core#hasRequirement">has requirement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="UserProfile">
+  <h3>User profile<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#UserProfile</p>
+  <div class="comment">
+   <span class="markdown">A user profile, described by a set of requirement (eg. 'I want to use elevators') rather than by personnal characteristics (eg. I'm in a wheelchair).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasRequirement" title="http://piirrite.univ-lyon1.fr/ontology/core#hasRequirement">has requirement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasAllowedValue" title="http://piirrite.univ-lyon1.fr/ontology/core#hasAllowedValue">has allowed value</a></li>
+  <li><a href="#hasCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#hasCondition">has condition</a></li>
+  <li><a href="#hasDistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceFactor">has distance factor</a></li>
+  <li><a href="#hasFlexibility" title="http://piirrite.univ-lyon1.fr/ontology/core#hasFlexibility">has flexibility</a></li>
+  <li><a href="#hasImportance" title="http://piirrite.univ-lyon1.fr/ontology/core#hasImportance">has importance</a></li>
+  <li><a href="#hasOperand" title="http://piirrite.univ-lyon1.fr/ontology/core#hasOperand">has operand</a></li>
+  <li><a href="#hasRequirement" title="http://piirrite.univ-lyon1.fr/ontology/core#hasRequirement">has requirement</a></li>
+  <li><a href="#hasTargetProperty" title="http://piirrite.univ-lyon1.fr/ontology/core#hasTargetProperty">has target property</a></li>
+  <li><a href="#hasTemporalValidity" title="http://piirrite.univ-lyon1.fr/ontology/core#hasTemporalValidity">has temporal validity window</a></li>
+  <li><a href="#passesBy" title="http://piirrite.univ-lyon1.fr/ontology/core#passesBy">passes by</a></li>
+  <li><a href="#usesOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#usesOperator">uses operator</a></li>
+ </ul>
+ <div class="entity" id="hasAllowedValue">
+  <h3>has allowed value<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasAllowedValue</p>
+  <div class="comment">
+   <span class="markdown">Links a saref property to the description of a value it can have.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://saref.etsi.org/core/v4.1.1/Property" target="_blank" title="https://saref.etsi.org/core/v4.1.1/Property">Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCondition">
+  <h3>has condition<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasCondition</p>
+  <div class="comment">
+   <span class="markdown">Links a requirement to a condition.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Requirement" title="http://piirrite.univ-lyon1.fr/ontology/core#Requirement">Requirement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Condition" title="http://piirrite.univ-lyon1.fr/ontology/core#Condition">Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDistanceFactor">
+  <h3>has distance factor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceFactor</p>
+  <div class="comment">
+   <span class="markdown">Links an atomic conditon to a distance factor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AtomicCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition">Atomic condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#DistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor">Distance factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFlexibility">
+  <h3>has flexibility<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasFlexibility</p>
+  <div class="comment">
+   <span class="markdown">Links a requirement to a float between 0 and 1 representing the level of flexibility needed for the matching with contextual environmental properties.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Requirement" title="http://piirrite.univ-lyon1.fr/ontology/core#Requirement">Requirement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Flexibility" title="http://piirrite.univ-lyon1.fr/ontology/core#Flexibility">Flexibility</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasImportance">
+  <h3>has importance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasImportance</p>
+  <div class="comment">
+   <span class="markdown">Links a requirement to its importance</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Requirement" title="http://piirrite.univ-lyon1.fr/ontology/core#Requirement">Requirement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Importance" title="http://piirrite.univ-lyon1.fr/ontology/core#Importance">Importance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasOperand">
+  <h3>has operand<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasOperand</p>
+  <div class="comment">
+   <span class="markdown">Links a composed condition to one of its operands.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ComposedCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#ComposedCondition">Composed condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Condition" title="http://piirrite.univ-lyon1.fr/ontology/core#Condition">Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRequirement">
+  <h3>has requirement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasRequirement</p>
+  <div class="comment">
+   <span class="markdown">Links a user profile to a requirement.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#UserProfile" title="http://piirrite.univ-lyon1.fr/ontology/core#UserProfile">User profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Requirement" title="http://piirrite.univ-lyon1.fr/ontology/core#Requirement">Requirement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTargetProperty">
+  <h3>has target property<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasTargetProperty</p>
+  <div class="comment">
+   <span class="markdown">Links a condition to the contextual property to which it relates.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AtomicCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition">Atomic condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://saref.etsi.org/core/v4.1.1/Property" target="_blank" title="https://saref.etsi.org/core/v4.1.1/Property">Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTemporalValidity">
+  <h3>has temporal validity window<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasTemporalValidity</p>
+  <div class="comment">
+   <span class="markdown">Links a saref property value to its temporal validity window, i.e. the temporal interval during which the value is considered valid. If the temporal validity window isn't specified, it is considered eternal.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://saref.etsi.org/core/v4.1.1/PropertyValue" target="_blank" title="https://saref.etsi.org/core/v4.1.1/PropertyValue">Property Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2006/time#Interval" target="_blank" title="http://www.w3.org/2006/time#Interval">Interval</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="passesBy">
+  <h3>passes by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#passesBy</p>
+  <div class="comment">
+   <span class="markdown">Links a navigable path to a point of interest it passes by</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor">Distance factor</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#NavigablePath" title="http://piirrite.univ-lyon1.fr/ontology/core#NavigablePath">Navigable path</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PointOfInterest" title="http://piirrite.univ-lyon1.fr/ontology/core#PointOfInterest">Point of Interest</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usesOperator">
+  <h3>uses operator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#usesOperator</p>
+  <div class="comment">
+   <span class="markdown">Links a condition to the operator to use for the matching with contextual environmental properties.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Condition" title="http://piirrite.univ-lyon1.fr/ontology/core#Condition">Condition</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#DistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor">Distance factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Operator" title="http://piirrite.univ-lyon1.fr/ontology/core#Operator">Operator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasDistanceType" title="http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceType">has distance type</a></li>
+  <li><a href="#hasRequiredValue" title="http://piirrite.univ-lyon1.fr/ontology/core#hasRequiredValue">has required value</a></li>
+  <li><a href="#hasValue" title="http://piirrite.univ-lyon1.fr/ontology/core#hasValue">has value</a></li>
+ </ul>
+ <div class="entity" id="hasDistanceType">
+  <h3>has distance type<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasDistanceType</p>
+  <div class="comment">
+   <span class="markdown">Links a distance factor to the way it is computed, e.g. from bird flight, by following humain pathways, by using the 'passes by' property.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor">Distance factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRequiredValue">
+  <h3>has required value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasRequiredValue</p>
+  <div class="comment">
+   <span class="markdown">Links a condition to a value that is considered valid.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AtomicCondition" title="http://piirrite.univ-lyon1.fr/ontology/core#AtomicCondition">Atomic condition</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#DistanceFactor" title="http://piirrite.univ-lyon1.fr/ontology/core#DistanceFactor">Distance factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#anySimpleType" target="_blank" title="http://www.w3.org/2001/XMLSchema#anySimpleType">any Simple Type</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasValue">
+  <h3>has value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#hasValue</p>
+  <div class="comment">
+   <span class="markdown">Links a value wrapper to its value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Flexibility" title="http://piirrite.univ-lyon1.fr/ontology/core#Flexibility">Flexibility</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Importance" title="http://piirrite.univ-lyon1.fr/ontology/core#Importance">Importance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#AND" title="http://piirrite.univ-lyon1.fr/ontology/core#AND">and</a></li>
+  <li><a href="#EQUALS" title="http://piirrite.univ-lyon1.fr/ontology/core#EQUALS">equals</a></li>
+  <li><a href="#GREATER_THAN" title="http://piirrite.univ-lyon1.fr/ontology/core#GREATER_THAN">greater than</a></li>
+  <li><a href="#LESSER_THAN" title="http://piirrite.univ-lyon1.fr/ontology/core#LESSER_THAN">less than</a></li>
+  <li><a href="#NOT" title="http://piirrite.univ-lyon1.fr/ontology/core#NOT">not</a></li>
+  <li><a href="#OR" title="http://piirrite.univ-lyon1.fr/ontology/core#OR">or</a></li>
+ </ul>
+ <div class="entity" id="AND">
+  <h3>and<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#AND</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#LogicalOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator">Logical operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EQUALS">
+  <h3>equals<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#EQUALS</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ComparisonOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator">Comparison operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GREATER_THAN">
+  <h3>greater than<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#GREATER_THAN</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ComparisonOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator">Comparison operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LESSER_THAN">
+  <h3>less than<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#LESSER_THAN</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#ComparisonOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#ComparisonOperator">Comparison operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NOT">
+  <h3>not<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#NOT</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#LogicalOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator">Logical operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OR">
+  <h3>or<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://piirrite.univ-lyon1.fr/ontology/core#OR</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#LogicalOperator" title="http://piirrite.univ-lyon1.fr/ontology/core#LogicalOperator">Logical operator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
