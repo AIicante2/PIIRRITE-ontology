@@ -158,6 +158,10 @@ piirrite:usesOperator rdf:type owl:ObjectProperty ;
 saref:hasPropertyValue rdf:type owl:ObjectProperty .
 
 
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+geo:hasGeometry rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -503,16 +507,8 @@ sf:Point rdf:type owl:Class .
 sf:Polygon rdf:type owl:Class .
 
 
-###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
-rdf:List rdf:type owl:Class .
-
-
 ###  http://www.w3.org/2000/01/rdf-schema#Class
 rdfs:Class rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Container
-rdfs:Container rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Datatype
