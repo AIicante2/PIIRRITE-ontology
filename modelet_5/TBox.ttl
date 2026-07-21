@@ -344,7 +344,7 @@ piirrite:Flexibility rdf:type owl:Class ;
                                        owl:onProperty piirrite:hasValue ;
                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                        owl:onDataRange [ rdf:type rdfs:Datatype ;
-                                                         owl:onDatatype xsd:decimal ;
+                                                         owl:onDatatype xsd:double ;
                                                          owl:withRestrictions ( [ xsd:minInclusive 0.0
                                                                                 ]
                                                                                 [ xsd:maxInclusive 1.0
@@ -364,7 +364,7 @@ piirrite:Importance rdf:type owl:Class ;
                                       owl:onProperty piirrite:hasValue ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onDataRange [ rdf:type rdfs:Datatype ;
-                                                        owl:onDatatype xsd:decimal ;
+                                                        owl:onDatatype xsd:double ;
                                                         owl:withRestrictions ( [ xsd:minInclusive 0.0
                                                                                ]
                                                                                [ xsd:maxInclusive 1.0

@@ -1,4 +1,5 @@
 PREFIX piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#>
+PREFIX spatialf: <http://jena.apache.org/function/spatial#>
 PREFIX saref: <https://saref.etsi.org/core/>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
@@ -9,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX sf: <http://www.opengis.net/ont/sf#>
 PREFIX : <http://piirrite.univ-lyon1.fr/data#>
 
-# CQ_1. What are the points of interest located within a 100-metre radius of a user?
+# VCQ_1. What are the points of interest located within a 100-metre radius of a user?
 SELECT ?poi ?wkt ?distance
 WHERE {
   	# Arbitrarily initialize the user location
@@ -19,13 +20,13 @@ WHERE {
     ?poi geo:hasGeometry ?poiGeom .
     ?poiGeom geo:asWKT ?wkt .
     # Compute the distance between the user and each PoI
-    BIND(geof:distance(?userWKT, ?wkt, uom:metre) AS ?distance)
+    BIND(spatialf:distance(?userWKT, ?wkt, uom:metre) AS ?distance)
     # Filter based on the distance
     FILTER(?distance <= 100)
 }
 ORDER BY ASC(?distance)
 
-# CQ_2. Which navigable polylines pass by a given point of interest of the campus?
+# VCQ_2. Which navigable polylines pass by a given point of interest of the campus?
 SELECT ?path ?wkt
 WHERE {
     # Get all candidate Paths
@@ -41,7 +42,7 @@ WHERE {
     }
 }
 
-# CQ_3. Which areas of interest are wheelchair-accessible?
+# VCQ_3. Which areas of interest are wheelchair-accessible?
 SELECT DISTINCT ?aoi
 WHERE {
     # Get all AoI with at least one specified property
@@ -53,7 +54,7 @@ WHERE {
         saref:hasValue "yes" .
 }
 
-# CQ_4. Where is the nearest vending machine to a bicycle park with a capacity of at least 20?
+# VCQ_4. Where is the nearest vending machine to a bicycle park with a capacity of at least 20?
 SELECT ?vendingMachine ?vmGeom (MIN(?distance) AS ?minDistance)
 WHERE {
     # Get candidate vending machines
@@ -77,13 +78,13 @@ WHERE {
     FILTER(xsd:integer(?capacityValue) >= 20)
 
     # Compute each distance
-    BIND(geof:distance(?vmGeom, ?bpGeom, <http://www.opengis.net/def/uom/OGC/1.0/metre>) AS ?distance)
+    BIND(spatialf:distance(?vmGeom, ?bpGeom, uom:metre) AS ?distance)
 }
 GROUP BY ?vendingMachine ?vmGeom
 ORDER BY ?minDistance
 LIMIT 1 # Keep only the shortest distance
 
-# CQ_5. Has it rained on the campus during the past two days?
+# VCQ_5. Has it rained on the campus during the past two days?
 ASK
 WHERE {
   # Get all AoI
@@ -111,7 +112,7 @@ WHERE {
   )
 }
 
-# CQ_6. Which navigable paths pass through the area with the highest pollen levels on May 1st, 2026?
+# VCQ_6. Which navigable paths pass through the area with the highest pollen levels on May 1st, 2026?
 SELECT ?path ?pathWKT ?aoi ?aoiWKT
 WHERE {
   {
@@ -152,3 +153,47 @@ WHERE {
   # Get all paths that intersect with the geometry of the previously retrieved AoI
   FILTER (geof:sfIntersects(?pathWKT, ?aoiWKT))
 }
+
+# VCQ_7 What set of properties is used to describe Anna's requirements?
+SELECT DISTINCT ?property
+WHERE {
+    :Anna a piirrite:UserProfile ;
+             piirrite:hasRequirement ?requirement .
+
+    ?requirement piirrite:hasCondition ?condition .
+
+    # Recursive search of atomic conditions inside composed conditions
+    ?condition (piirrite:hasCondition|piirrite:hasOperand|piirrite:hasAtomicCondition)* ?atomicCondition .
+
+    ?atomicCondition a piirrite:AtomicCondition ;
+                      piirrite:hasTargetProperty ?property .
+}
+
+# VCQ_8 How many requirements does a user have in average?
+SELECT (AVG(?flexValue) AS ?averageFlexibility)
+WHERE {
+    ?userProfile a piirrite:UserProfile ;
+                 piirrite:hasRequirement ?requirement .
+
+    ?requirement piirrite:hasFlexibility ?flexibility .
+
+    ?flexibility piirrite:hasValue ?flexValue .
+}
+
+# VCQ_9 What is the subset of Anna's requirements that use at least one distance factor?
+SELECT DISTINCT ?requirement
+WHERE {
+    :Anna a piirrite:UserProfile ;
+             piirrite:hasRequirement ?requirement .
+
+    ?requirement piirrite:hasCondition ?condition .
+
+    # Recursive search of atomic conditions inside composed conditions
+    ?condition (piirrite:hasCondition|piirrite:hasOperand|piirrite:hasAtomicCondition)* ?atomicCondition .
+
+    ?atomicCondition a piirrite:AtomicCondition ;
+                      piirrite:hasDistanceFactor ?distanceFactor .
+
+    ?distanceFactor a piirrite:DistanceFactor .
+}
+

@@ -48,10 +48,6 @@ Which areas of interest are wheelchair-accessible? *Reflects:* $R_1$, $R_6$ — 
 ### $VCQ_4$
 Where is the nearest vending machine to a bicycle park with a capacity of at least 20? *Reflects:* $R_5​$ — requires (i) feature kind filtering, (ii) quantitative property value filtering (`xsd:integer` $\geq 20$), and (iii) spatial proximity computation via `geof:distance`.
 
-### $VCQ_5$
-Given a user who requires step-free access and proximity to a vending machine, which points of interest along a given navigable path satisfy both constraints simultaneously?
-*Reflects:* $R_1$, $R_5$​ — requires joint reasoning over spatial (`piirrite:passesBy`), accessibility (`saref:PropertyValue`), and feature kind (`saref:FeatureKind`) dimensions within a single query.
-
 # Group 3 — Temporal Validity of Contextual Properties
 
 ## Scoping CQs
@@ -69,17 +65,13 @@ Is every `saref:PropertyValue` associated with exactly one temporal validity int
 *Expected answer:* No — the ontology enforces `≤1 saref:PropertyValue.hasTemporalValidity`, meaning that a given property value instance can have 0 or 1 temporal validity window.
 
 ## Validating CQs
-### $VCQ_6$
+### $VCQ_5$
 Has it rained on the campus during the past two days?
 *Reflects:* $R_2$​ — requires filtering `piirrite:TemporalPropertyValue` instances whose validity interval intersects the past 48 hours and whose precipitation value exceeds zero.
 
-### $VCQ_7$
+### $VCQ_6$
 Which navigable paths pass through the area with the highest pollen levels on 1 May 2026?
 *Reflects:* $R_2$​ — requires joint reasoning over (i) temporally valid pollen-level property values on the target date, (ii) ranking by pollen concentration, and (iii) geometric intersection of path and area geometries via `geof:sfIntersects`.
-
-### $VCQ_8$
-Given a user sensitive to pollen and rain, which navigable paths on the campus avoid high-pollen areas and uncovered outdoor segments on a given date?
-*Reflects:* $R_1$​, $R_2$​ — requires joint reasoning over temporally valid pollen-level and weather property values, geometric intersection of paths with high-pollen areas, and coverage-related contextual properties of path segments.
 
 # Group 4 — Matching user requirements with environmental context by profiling users
 
@@ -97,49 +89,44 @@ When comparing the value expected by a user with the value of an environmental p
 *Expected answer:* Yes, operators like > or < are asymmetric. The ontology assumes that i. the left operand is the environmental value and ii. the right operand is the expected value.
 
 ### $SCQ_9$
-Could a couple (`piirrite:TargetProperty` ; `piirrite:ExpectedValue`) be understood as an equivalent to a `saref:PropertyValue` ?
+Could a couple (`piirrite:TargetProperty` ; `piirrite:ExpectedValue`) be understood as an equivalent to a `saref:PropertyValue`?
 *Expected answer:* No, a `piirrite:ExpectedValue` can be an interval while the value of a `saref:PropertyValue` is a set number (if it is quantitative).
 
 ## Relationship CQ
 ### $RCQ_5$
-How many `piirrite:Requirement` are needed to define a `piirrite:UserProfile` ?
+How many `piirrite:Requirement` are needed to define a `piirrite:UserProfile`?
 *Expected answer:* Any number of requirement, from 0 to many, can be used to define a user profile. The absence of requirement is interpreted as a total indifference of the environment by the user.
 
 ### $RCQ_6$
-How many `piirrite:Condition` are needed to define a `piirrite:Requirement` ?
+How many `piirrite:Condition` are needed to define a `piirrite:Requirement`?
 *Expected answer:* At least one. A requirement without any condition would not serve any purpose and, more strongly, would not really exist.
 
 ## Validating CQ
-### $VCQ_{10}$
-What set of properties could be useful to describe Anna's requirements ?
+### $VCQ_{7}$
+What set of properties could be useful to describe Anna's requirements?
 *Reflects* $R_1$ to $R_6$ ​— requires that the system is able to describe and understand user requirements through the use of the properties that contextualize the environment.
 
-### $VCQ_{11}$
-Which navigable path is the least adequate for Anna on the La Doua campus ?
-*Reflects*​ $R_1$ to $R_6$ ​— requires a dynamical matching between a given set of user requirements and environmental properties that can vary across time.
+### $VCQ_{8}$
+How many requirements does a user have in average?
+This CQ requires the PIIRRITE ontology to have the capacity to model users and requirements, as well as being able to link a user to his own set of requirements.
 
 # Group 5 ​— Advanced user profiling through complex requirements
 
 ## Scoping CQ
 ### $SCQ_9$
-Is there a limit to the recursive nature of a `piirrite:ComposedCondition` ?
+Is there a limit to the recursive nature of a `piirrite:ComposedCondition`?
 *Expected answer:* No, a `piirrite:ComposedCondition` can be nested indefinitely. Such a condition is not necessarily irreductible (e.g. $\neg\neg A \equiv A$). This is inevitable since the operators are not interpreted _per se_ by the owl reasoner.
 
 ### $SCQ_{10}$
-Which distance types does `piirrite:DistanceRequisite` support ?
+Which distance types does `piirrite:DistanceRequisite` support?
 *Expected answer:* `From bird flight`, `Following humain pathways` and `piirrite:passesBy`.
 
 ## Relationship CQ
 ### $RCQ_9$
-Why aren't the operators (`piirrite:EQUAL` or `piirrite:AND`) `rdfs:subClassOf` `piirrite:ComparisonOperator` and `piirrite:LogicalOperator`, but are `rdf:type` ?
+Why aren't the operators (`piirrite:EQUAL` or `piirrite:AND`) `rdfs:subClassOf` `piirrite:ComparisonOperator` and `piirrite:LogicalOperator`, but are `rdf:type`?
 *Expected answer:* Because they are instances of the two classes, and not classes themselves. We cannot instantiate a `piirrite:EQUAL`.
 
 ## Validating_CQ
-### $VCQ_{11}
-During one of Anna's course over the campus, which of her requirements are related to spatial elements that are not directly navigated, but rather distant ?
-*Reflects* $R_3$ ​— requires the system to differentiate between requirements concerning immediate, navigated pathways and requirements about more distant spatial elements.
-
-### $VCQ_{12}
-How are Sacha's $R_4$ and $R_5$ requirements different, and how is this difference handled by PIIRRITE ?
-*Reflects* $R_5$ ​— requires the system to understand two types of requirement : (i) requirements relating to the adequacy of spatial elements over the whole course and (ii) requirements relating to the passage by a specific spatial element, once during the whole course. It is important that the system differentiates these two types of requirement since they are treated differently during the itinerary generation.
-
+### $VCQ_{9}
+What is the subset of Anna's requirements that use at least one distance factor?
+This CQ ensures that PIIRRITE is able to link a user to the conditions defining his requirements, as well as their own relations. By providing such semantics, PIIRRITE enables the modeling of complex user requirements over the traversed environment and lays stable foundations for a comprehensive and extensive _inclusive itinerary proposition system_.

@@ -3,20 +3,21 @@
 @prefix pcv: <http://piirrite.univ-lyon1.fr/vocabulary#> .
 @prefix piirrite: <http://piirrite.univ-lyon1.fr/ontology/core#> .
 @prefix saref: <https://saref.etsi.org/core/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sf: <http://www.opengis.net/ont/sf#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :Anna a piirrite:UserProfile ;
     piirrite:hasRequirement [ # Peu de bruit
-            piirrite:hasImportance [ piirrite:hasValue "0.6"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.4"^^xsd:decimal] ;
-            piirrite:hasComposedCondition [
+            piirrite:hasImportance [ piirrite:hasValue "0.6"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.4"^^xsd:double ] ;
+            piirrite:hasCondition [
                 piirrite:hasOperand [
                         a piirrite:AtomicCondition ;
                         piirrite:hasTargetProperty pcv:P_Noise ;
                         piirrite:hasRequiredValue "50"^^xsd:integer ;
-                        pirrite:usesOperator piirrite:LESSER_THAN
+                        piirrite:usesOperator piirrite:LESSER_THAN
                     ],
                     [
                         a piirrite:ComposedCondition ;
@@ -26,28 +27,38 @@
                             piirrite:hasRequiredValue "yes"^^xsd:string ;
                             piirrite:hasDistanceFactor [
                                 a piirrite:DistanceFactor ;
-                                piirrite:distanceType "From bird flight"^^rdfs:Literal ;
+                                piirrite:distanceType "From bird's flight"^^rdfs:Literal ;
                                 piirrite:hasRequiredValue "100"^^xsd:integer ;
                                 piirrite:usesOperator piirrite:LESSER_THAN
                             ]
-                        ]
+                        ] ;
                         piirrite:usesOperator piirrite:NOT
                     ] ;
                 piirrite:usesOperator piirrite:AND
             ]
         ],
         [ # Peu de fréquentation
-            piirrite:hasImportance [ piirrite:hasValue "0.75"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.6"^^xsd:decimal] ;
-            piirrite:hasAtomicCondition [
-                    piirrite:hasTargetProperty pcv:P_Crowdy ;
-                    piirrite:hasRequiredValue "None;;Low" ;
-                    piirrite:usesOperator piirrite:In
-                ]
+            piirrite:hasImportance [ piirrite:hasValue "0.75"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.6"^^xsd:double ] ;
+            piirrite:hasCondition [
+                    piirrite:hasOperand [
+                        a piirrite:AtomicCondition ;
+                        piirrite:hasTargetProperty pcv:P_Crowdy ;
+                        piirrite:hasRequiredValue "None" ;
+                        piirrite:usesOperator piirrite:In
+                    ],
+                    [
+                        a piirrite:AtomicCondition ;
+                        piirrite:hasTargetProperty pcv:P_Crowdy ;
+                        piirrite:hasRequiredValue "Low" ;
+                        piirrite:usesOperator piirrite:In
+                    ] ;
+                    piirrite:usesOperator piirrite:OR
+            ]
         ],
         [ # Peu de luminosité
-            piirrite:hasImportance [ piirrite:hasValue "0.8"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.8"^^xsd:decimal] ;
+            piirrite:hasImportance [ piirrite:hasValue "0.8"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.6"^^xsd:double ] ;
             piirrite:hasAtomicCondition [
                     piirrite:hasTargetProperty pcv:P_Sun_Exposition ;
                     piirrite:hasRequiredValue "None" ;
@@ -57,151 +68,154 @@
 
 :Dan a piirrite:UserProfile ;
     piirrite:hasRequirement [ # Passage par des toilettes
-            piirrite:hasImportance [ piirrite:hasValue "0.85"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.2"^^xsd:decimal] ;
+            piirrite:hasImportance [ piirrite:hasValue "0.85"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.2"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_WC_Access ;
                     piirrite:hasRequiredValue "true"^^xsd:boolean ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ],
         [ # Passage par des endroits agréables
-            piirrite:hasImportance [ piirrite:hasValue "0.6"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.7"^^xsd:decimal] ;
+            piirrite:hasImportance [ piirrite:hasValue "0.6"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.7"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Aesthetic_Rating ;
                     piirrite:hasRequiredValue "7"^^xsd:integer ;
-                    piirrite:usesOperator piirrite:GreaterThan
+                    piirrite:usesOperator piirrite:GREATER_THAN
                 ]
         ],
         [ # Trajets protégés de la pluie (besoin lié au parapluie)
-            piirrite:hasImportance [ piirrite:hasValue "0.7"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.3"^^xsd:decimal] ;
+            piirrite:hasImportance [ piirrite:hasValue "0.7"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.3"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_indoor ;
                     piirrite:hasRequiredValue "true"^^xsd:boolean ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ] .
 
 :Sacha a piirrite:UserProfile ;
     piirrite:hasRequirement [ # Pas d'ascenseur
-            piirrite:hasImportance [ piirrite:hasValue "0.6"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.1"^^xsd:decimal] ;
+            piirrite:hasImportance [ piirrite:hasValue "0.6"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.1"^^xsd:double ] ;
             piirrite:hasCondition [
-                    piirrite:hasTargetProperty saref:P_Amenity ;
-                    piirrite:hasRequiredValue "elvator"^^xsd:string ;
-                    piirrite:usesOperator piirrite:NotEquals
+                    piirrite:hasOperand [
+                        piirrite:hasTargetProperty saref:P_Amenity ;
+                        piirrite:hasRequiredValue "elevator"^^xsd:string ;
+                        piirrite:usesOperator piirrite:EQUALS
+                    ] ;
+                    piirrite:usesOperator piirrite:NOT
                 ]
         ],
         [ # Passage par des espaces agréables
-            piirrite:hasImportance [ piirrite:hasValue "0.7"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.6"^^xsd:decimal] ;
+            piirrite:hasImportance [ piirrite:hasValue "0.7"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.6"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Enjoyable ;
                     piirrite:hasRequiredValue "0.7"^^xsd:integer ;
-                    piirrite:usesOperator piirrite:GreaterThan
+                    piirrite:usesOperator piirrite:GREATER_THAN
                 ]
         ],
         [ # Pas de chemin non-lisse
-            piirrite:hasImportance [ piirrite:hasValue "0.9"^^xsd:decimal] ;
-            piirrite:hasFlexibility [ piirrite:hasValue "0.0"^^xsd:decimal] ;
+            piirrite:hasImportance [ piirrite:hasValue "0.9"^^xsd:double ] ;
+            piirrite:hasFlexibility [ piirrite:hasValue "0.0"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Smoothness ;
                     piirrite:hasRequiredValue "good"^^xsd:string ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ] .
 
 :Colin a piirrite:UserProfile ;
     piirrite:hasRequirement [ # Passage par un distributeur automatique
-            piirrite:hasImportance  [ piirrite:hasValue "INF"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.0"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "INF"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.0"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Amenity ;
                     piirrite:hasRequiredValue "vending_machine"^^xsd:string ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ],
         [ # Passer par une poubelle
-            piirrite:hasImportance  [ piirrite:hasValue "INF"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.0"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "INF"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.0"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Bin ;
                     piirrite:hasRequiredValue "yes"^^xsd:string ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ] .
 
 :Meriem a piirrite:UserProfile ;
     piirrite:hasRequirement [ # Passer par Maintenance A et Maintenance B
-            piirrite:hasImportance  [ piirrite:hasValue "INF"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.0"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "INF"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.0"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Name ;
                     piirrite:hasRequiredValue "Maintenance_A" ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ],
                 [
                     piirrite:hasTargetProperty saref:P_Name ;
                     piirrite:hasRequiredValue "Maintenance_B" ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ],
         [ # Trajets courts
-            piirrite:hasImportance  [ piirrite:hasValue "0.8"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.3"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "0.8"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.3"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Path_Length ;
                     piirrite:hasRequiredValue "500"^^xsd:integer ;
-                    piirrite:usesOperator piirrite:LessThan
+                    piirrite:usesOperator piirrite:LESSER_THAN
                 ]
         ],
         [ # Peu de pollen
-            piirrite:hasImportance  [ piirrite:hasValue "1.0"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.2"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "1.0"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.2"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_pollen_intensity ;
                     piirrite:hasRequiredValue "0.2"^^xsd:float ;
-                    piirrite:usesOperator piirrite:LessThan
+                    piirrite:usesOperator piirrite:LESSER_THAN
                 ]
         ] .
 
 :Francois a piirrite:UserProfile ;
     piirrite:hasRequirement [ # Pas d'escalier
-            piirrite:hasImportance  [ piirrite:hasValue "INF"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.0"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "INF"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.0"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Stairs_Present ;
                     piirrite:hasRequiredValue "false"^^xsd:boolean ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ],
         [ # Pas de pente trop forte
-            piirrite:hasImportance  [ piirrite:hasValue "0.9"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.2"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "0.9"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.2"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Slope ;
                     piirrite:hasRequiredValue "5"^^xsd:integer ;
-                    piirrite:usesOperator piirrite:LessThan
+                    piirrite:usesOperator piirrite:LESSER_THAN
                 ]
         ],
         [ # Pas de gravier
-            piirrite:hasImportance  [ piirrite:hasValue "0.9"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.1"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "0.9"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.1"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Smoothness ;
                     piirrite:hasRequiredValue "good"^^xsd:string ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ],
         [ # Chargeur de téléphone
-            piirrite:hasImportance  [ piirrite:hasValue "0.4"^^xsd:decimal] ;
-            piirrite:hasFlexibility  [ piirrite:hasValue "0.5"^^xsd:decimal] ;
+            piirrite:hasImportance  [ piirrite:hasValue "0.4"^^xsd:double ] ;
+            piirrite:hasFlexibility  [ piirrite:hasValue "0.5"^^xsd:double ] ;
             piirrite:hasCondition [
                     piirrite:hasTargetProperty saref:P_Charging_Point ;
                     piirrite:hasRequiredValue "true"^^xsd:boolean ;
-                    piirrite:usesOperator piirrite:Equals
+                    piirrite:usesOperator piirrite:EQUALS
                 ]
         ] .
 
