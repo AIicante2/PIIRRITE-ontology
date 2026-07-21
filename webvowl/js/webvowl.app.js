@@ -8714,7 +8714,7 @@ webvowl.app =
 	    if ( ontology.indexOf("new_ontology") !== -1 ) {
 	      loadingModule.hideLoadingIndicator();
 	      graph.showEditorHintIfNeeded();
-	      f2r = "./data/new_ontology.json";
+	      f2r = "./data/ontology.json";
 	      loadingNewOntologyForEditor=true;
 	    }
 	    
