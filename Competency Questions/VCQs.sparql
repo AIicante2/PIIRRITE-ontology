@@ -54,7 +54,7 @@ WHERE {
         saref:hasValue "yes" .
 }
 
-# VCQ_4. Where is the nearest vending machine to a bicycle park with a capacity of at least 20?
+# VCQ_4. Where is the nearest vending machine to a bicycle parking with a capacity of at least 20?
 SELECT ?vendingMachine ?vmGeom (MIN(?distance) AS ?minDistance)
 WHERE {
     # Get candidate vending machines
@@ -163,13 +163,13 @@ WHERE {
     ?requirement piirrite:hasCondition ?condition .
 
     # Recursive search of atomic conditions inside composed conditions
-    ?condition (piirrite:hasCondition|piirrite:hasOperand|piirrite:hasAtomicCondition)* ?atomicCondition .
+    ?condition (piirrite:hasCondition|piirrite:hasOperand)* ?atomicCondition .
 
     ?atomicCondition a piirrite:AtomicCondition ;
                       piirrite:hasTargetProperty ?property .
 }
 
-# VCQ_8 How many requirements does a user have in average?
+# VCQ_8 What is the average flexibility over all requirements of all user?
 SELECT (AVG(?flexValue) AS ?averageFlexibility)
 WHERE {
     ?userProfile a piirrite:UserProfile ;
@@ -189,7 +189,7 @@ WHERE {
     ?requirement piirrite:hasCondition ?condition .
 
     # Recursive search of atomic conditions inside composed conditions
-    ?condition (piirrite:hasCondition|piirrite:hasOperand|piirrite:hasAtomicCondition)* ?atomicCondition .
+    ?condition (piirrite:hasCondition|piirrite:hasOperand)* ?atomicCondition .
 
     ?atomicCondition a piirrite:AtomicCondition ;
                       piirrite:hasDistanceFactor ?distanceFactor .
@@ -197,3 +197,17 @@ WHERE {
     ?distanceFactor a piirrite:DistanceFactor .
 }
 
+# VCQ_10 What is the maximum degree of recursion achieved by any composed condition?
+SELECT (MAX(?nbConditions) - 1 AS ?maxRecursionDegree)
+WHERE {
+    {
+        SELECT ?rootCondition (COUNT(DISTINCT ?anyCondition) AS ?nbConditions)
+        WHERE {
+            ?userProfile a piirrite:UserProfile ;
+                         piirrite:hasRequirement ?requirement .
+            ?requirement piirrite:hasCondition ?rootCondition .
+            ?rootCondition (piirrite:hasOperand)* ?anyCondition .
+        }
+        GROUP BY ?rootCondition
+    }
+}
